@@ -2,7 +2,7 @@ angular.module('profile', ['ngMessages', 'ngRoute', 'mgcrea.ngStrap'])
   .config(function($routeProvider, $authProvider) {
     $routeProvider
       .when('/profile', {
-        templateUrl: 'profile/views/profile.html',
+        templateUrl: 'truck-profile/views/profile.html',
         controller: 'ProfileController',
         resolve: {
           authenticated: function($q, $location, $auth) {

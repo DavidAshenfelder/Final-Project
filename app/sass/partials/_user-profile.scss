@@ -1,0 +1,33 @@
+.truck-profile-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profile-pic-wrapper {
+  width: 30%;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.activateButtons {
+  float: right;
+  margin: 2%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  button {
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 50%;
+  }
+}
+
+.profileLegend {
+  margin: 0;
+}

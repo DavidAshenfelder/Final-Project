@@ -1,36 +1,31 @@
+
 <div class="container-fluid" >
-  <div class="panel panel-default col-md-12 col-sm-12 col-xs-12">
-    <div class="panel-heading">Home Page</div>
       <div class="panel-body">
-        <div class="mapPageWrapper  col-md-7 col-sm-12 col-xs-12">
+        <div class="mapPageWrapper">
           <div class="mapWrapper">
-            <div class="map">
+            <div class="map panel-default">
             <h2>Truck Map</h2>
-            <img  src="Images/filler-map-image.gif" alt="">
+            <img  src="Images/filler-map-image.gif" >
           </div>
-          <div class="mapInfoWrapper col-md-3 col-sm-12 col-xs-12 ">
-            <div class="headerWrapper">
-              <h2 class="activeHeader">Active Trucks</h2>
-            </div>
-            <div class="activeTruckWrapper">
-              <div class="truckWrapper">
-                <h2 class="truckTitle">Taco Shack</h2>
-                <ul>
-                  <li class="truckLocation"><h4 class="activeTruckHeaders">Location:</h4> 121 Elm St.</li>
-                  <li class="truckTimes"><h4 class="activeTruckHeaders">Time:</h4> 12pm-5pm</li>
-                  <li class="truckDescription"><h4 class="activeTruckHeaders">Description:</h4> Fresh tacos made from all local all organic ingredients</li>
-                  <li class="truckMessage">Come out and see us for Taco Thursday</li>
-                </ul>
-              </div>
-              <accodion>
-                <accordion-group is-open="status.open">
-                   <accordion-heading>
-                    I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-                   </accordion-heading>
-                   This is just some content to illustrate fancy headings.
-                 </accordion-group>
-              </accodion>
-            </div>
+        </div>
+          <div class="mapInfoWrapper panel-default col-md-4">
+        <div class="headerWrapper">
+          <h2 class="activeHeader">Active Trucks</h2>
+        </div>
+        <div class="activeTruckWrapper">
+          <accordion class="truckWrapper">
+            <accordion-group is-open="status.open">
+              <accordion-heading>
+                Taco Shack    <i class=" truckTitle pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+              </accordion-heading>
+              <ul>
+                <li class="truckLocation"><h4 class="activeTruckHeaders">Location:</h4> 121 Elm St.</li>
+                <li class="truckTimes"><h4 class="activeTruckHeaders">Time:</h4> 12pm-5pm</li>
+                <li class="truckDescription"><h4 class="activeTruckHeaders">Description:</h4> Fresh tacos made from all local all organic ingredients</li>
+                <li class="truckMessage">Come out and see us for Taco Thursday</li>
+              </ul>
+            </accordion-group>
+          </accordion>
         </div>
       </div>
     </div>

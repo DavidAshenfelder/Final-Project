@@ -1,6 +1,7 @@
 .navbar {
   border: 0;
-box-shadow: 0 5px 10px rgba(0, 0, 0, .8);}
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .8);
+}
 
 .navbar-header {
   float: left;
@@ -27,6 +28,9 @@ box-shadow: 0 5px 10px rgba(0, 0, 0, .8);}
 .navbar-default {
   color: #fff;
   background: $grey;
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 
 .navbar-default .navbar-brand {

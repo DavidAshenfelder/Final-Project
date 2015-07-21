@@ -2,7 +2,7 @@
 $grey: #343838;
 $deepTeal: #005F6B;
 $mediumTeal: #008C9E;
-$lightTeal: #00B4CC;
+$lightTeal: #3ad9ea;
 $aqua: #00DFFC;
 $text: #868989;
 $lightText: #d4d6d6;
@@ -14,6 +14,11 @@ $lightText: #d4d6d6;
 
 body {
   background: url(../Images/shattered.png);
+  background-size: auto;
+}
+
+.headerFiller {
+  height: 70px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -46,6 +51,8 @@ a {
   font-weight: bold;
   text-transform: uppercase;
   border-color: $text;
+  background-color: $grey;
+  color: $lightText;
 }
 
 .form-control {
@@ -138,22 +145,31 @@ a {
   border-radius: 2px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
   background-color: $aqua;
+  border: 1px solid $mediumTeal;
 }
 
 .btn-primary {
   background-color: $aqua;
+  color: $text;
+  border: 1px solid $mediumTeal;
+
 }
 
 .btn-primary:hover {
-  background-color: $mediumTeal;
+  background-color: $lightTeal;
 }
 
 .btn-success {
   background-color: $aqua;
+  color: $text;
+  border: 1px solid $mediumTeal;
+
 }
 
 .btn-success:hover {
-  background-color: $deepTeal;
+  background-color: $mediumTeal;
+  transition: ease .25s;
+  border: 1px solid $aqua;
 }
 
 .btn-danger {

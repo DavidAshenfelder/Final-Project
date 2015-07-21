@@ -7,17 +7,20 @@
   margin: 1%;
   padding: 1%;
   border-radius: 5px;
+  box-shadow: 0 8px 17px rgba(0, 0, 0, 0.8);
+
   img {
-    width: 800px;
-    height: 550px;
+    width: 100%;
+    height: 100%;
   }
 }
 
-.panel h2 {
+.panel-default h2 {
   width: 100%;
   text-align: center;
   color: $text;
   border-bottom: 2px solid $text;
+  font-size: 4vmax;
 }
 
 
@@ -26,8 +29,10 @@
   margin: 1%;
   padding: 1%;
   height: 100%;
+  box-shadow: 0 8px 17px rgba(0, 0, 0, 0.8);
   .activeHeader {
     border-bottom: 2px solid $text;
+    text-align: center;
   }
   background-color: $grey;
   .activeTruckWrapper {
@@ -37,10 +42,6 @@
       background-color: $text;
 
     }
-    .truckTitle {
-      color: $grey;
-    }
-
   }
   ul {
     padding: 0;
