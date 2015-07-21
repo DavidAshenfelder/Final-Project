@@ -1,0 +1,52 @@
+.navbar {
+  border: 0;
+box-shadow: 0 5px 10px rgba(0, 0, 0, .8);}
+
+.navbar-header {
+  float: left;
+  padding-left: 15px;
+}
+
+.navbar-nav {
+  float: left;
+  margin: 0;
+}
+
+.navbar-nav > li {
+  float: left;
+}
+
+
+
+.navbar-nav > li > a {
+  padding: 15px;
+  color: black;
+
+}
+
+.navbar-default {
+  color: #fff;
+  background: $grey;
+}
+
+.navbar-default .navbar-brand {
+  color: #fff;
+  background-color: $mediumTeal;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: $text;
+  background-color: $deepTeal;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: $text;
+  &:hover {
+    color: $aqua;
+  }
+}
+
+.navbar-brand {
+  margin-left: -15px;
+  transition: 0.25s all;
+}

@@ -1,79 +1,51 @@
-@import "partials/auth";
+//////Colors///////
+$grey: #343838;
+$deepTeal: #005F6B;
+$mediumTeal: #008C9E;
+$lightTeal: #00B4CC;
+$aqua: #00DFFC;
+$text: #868989;
+$lightText: #d4d6d6;
+
+@import "partials/header";
+@import "partials/user-home";
+@import "partials/user-profile";
+@import "partials/user-truck-detail";
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  background: #e4e7ec;
+  background: url(../Images/shattered.png);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
+  color: $text;
 }
 
 a {
-  color: #000;
+  color: black;
+  &:hover {
+    color: $deepTeal;
+  }
 }
 
 .text-muted {
-  color: #90939a;
+  color: $aqua;
 }
 
-.navbar {
-  border: 0;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
-}
-
-.navbar-header {
-  float: left;
-  padding-left: 15px;
-}
-
-.navbar-nav {
-  float: left;
-  margin: 0;
-}
-
-.navbar-nav > li {
-  float: left;
-}
-
-.navbar-nav > li > a {
-  padding: 15px;
-}
-
-.navbar-default {
-  color: #fff;
-  background: #fff;
-}
-
-.navbar-default .navbar-brand {
-  color: #fff;
-  background-color: #ce832c;
-}
-
-.navbar-default .navbar-brand:hover {
-  color: #ce832c;
-  background-color: #fff;
-}
-
-.navbar-brand {
-  margin-left: -15px;
-  transition: 0.25s all;
-}
 
 .panel {
-  border-color: #cfd9D7;
+  background-color: $lightText;
   border-radius: 2px;
-  box-shadow: 0 8px 17px rgba(0, 0, 0, .2);
+  padding: 0;
+  box-shadow: 0 8px 17px rgba(0, 0, 0, .8);
 }
 
-.panel-default > .panel-heading {
+.panel-default .panel-heading {
   font-size: 85%;
   font-weight: bold;
-  color: #444;
   text-transform: uppercase;
-  background-color: #f6f6f6;
-  border-color: #cfd9db;
+  border-color: $text;
 }
 
 .form-control {
@@ -165,22 +137,23 @@ a {
   font-weight: bold;
   border-radius: 2px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+  background-color: $aqua;
 }
 
 .btn-primary {
-  background-color: #4285f4;
+  background-color: $aqua;
 }
 
 .btn-primary:hover {
-  background-color: #3367d6;
+  background-color: $mediumTeal;
 }
 
 .btn-success {
-  background-color: #0f9d58;
+  background-color: $aqua;
 }
 
 .btn-success:hover {
-  background-color: #196c4a;
+  background-color: $deepTeal;
 }
 
 .btn-danger {

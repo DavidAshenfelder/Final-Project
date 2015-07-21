@@ -4,21 +4,17 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Demo Auth In Angular</title>
-  <link href="favicon.png" rel="shortcut icon">
+  <title>Truck Tracker</title>
+  <link rel="shortcut icon" href="truckfavicon.ico" type="image/x-icon">
   <link href="//fonts.googleapis.com/css?family=Roboto|Montserrat:400,700|Open+Sans:400,300,600" rel="stylesheet">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
   <link href="//cdn.jsdelivr.net/animatecss/3.2.0/animate.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="./vendor/bootstrap/dist/css/bootstrap.min.css">
   <!-- bower:css -->
   <!-- endbower -->
-
   <!-- inject:css -->
   <link rel="stylesheet" href=".tmp/styles.css">
   <!-- endinject -->
-
 </head>
 
 <body>
@@ -36,6 +32,7 @@
   <script src="vendor/angular-strap/dist/angular-strap.tpl.js"></script>
   <script src="vendor/satellizer/satellizer.js"></script>
   <script src="vendor/angular-sanitize/angular-sanitize.js"></script>
+  <script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <!-- endbower -->
 
 
@@ -50,12 +47,13 @@
   <script src="posts/posts.module.js"></script>
   <script src="posts/posts.postService.js"></script>
   <script src="posts/posts.controller.js"></script>
-  <script src="app.module.js"></script>
+  <script src="controllers/uiBootstrap.js"></script>
   <script src="home/navbar.js"></script>
   <script src="controllers/navbar.js"></script>
   <script src="auth/auth.signup.js"></script>
   <script src="auth/auth.logout.js"></script>
   <script src="auth/auth.login.js"></script>
+  <script src="app.module.js"></script>
   <!-- endinject -->
 </body>
 

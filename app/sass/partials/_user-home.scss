@@ -1,0 +1,58 @@
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: $grey;
+  margin: 1%;
+  padding: 1%;
+  border-radius: 5px;
+  img {
+    width: 800px;
+    height: 550px;
+  }
+}
+
+.panel h2 {
+  width: 100%;
+  text-align: center;
+  color: $text;
+  border-bottom: 2px solid $text;
+}
+
+
+.mapInfoWrapper {
+  border-radius: 5px;
+  margin: 1%;
+  padding: 1%;
+  height: 100%;
+  .activeHeader {
+    border-bottom: 2px solid $text;
+  }
+  background-color: $grey;
+  .activeTruckWrapper {
+    background-color: $text;
+    border-radius: 5px;
+    .truckWrapper {
+      background-color: $text;
+
+    }
+    .truckTitle {
+      color: $grey;
+    }
+
+  }
+  ul {
+    padding: 0;
+  }
+  ul li {
+    list-style-type: none;
+    text-align: center;
+    color: $grey;
+    padding: 0;
+    margin: 0;
+    .activeTruckHeaders {
+      color: $grey;
+    }
+  }
+}
