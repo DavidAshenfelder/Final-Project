@@ -62,8 +62,15 @@ router.route('/login')
         // newProperty: req.body.newProperty,
         displayName: req.body.displayName,
         email: req.body.email,
+        username: req.body.username,
+        phone: req.body.phone,
+        truck: req.body.truck,
+        active: req.body.active,
+        truckName: req.body.truckName,
+        truckWebsite: req.body.truckWebsite,
         password: req.body.password,
       });
+      console.log(user);
       user.save(function() {
         res.send({ token: createToken(user) });
       });

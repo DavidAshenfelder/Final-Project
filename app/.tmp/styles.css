@@ -59,8 +59,8 @@
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   background-color: #343838;
+  padding: 2%;
   margin: 1%;
-  padding: 1%;
   border-radius: 5px;
   box-shadow: 0 8px 17px rgba(0, 0, 0, 0.8); }
   .map img {
@@ -72,12 +72,12 @@
   text-align: center;
   color: #868989;
   border-bottom: 2px solid #868989;
-  font-size: 4vmax; }
+  font-size: 2.5vmax; }
 
 .mapInfoWrapper {
   border-radius: 5px;
+  padding: 2%;
   margin: 1%;
-  padding: 1%;
   height: 100%;
   box-shadow: 0 8px 17px rgba(0, 0, 0, 0.8);
   background-color: #343838; }
@@ -85,12 +85,13 @@
     border-bottom: 2px solid #868989;
     text-align: center; }
   .mapInfoWrapper .activeTruckWrapper {
-    background-color: #868989;
-    border-radius: 5px; }
+    border-radius: 5px;
+    padding: 2%; }
     .mapInfoWrapper .activeTruckWrapper .truckWrapper {
-      background-color: #868989; }
+      width: 90%; }
   .mapInfoWrapper ul {
-    padding: 0; }
+    padding: 0;
+    width: 100%; }
   .mapInfoWrapper ul li {
     list-style-type: none;
     text-align: center;
@@ -146,11 +147,15 @@
   margin: 0; }
 
 body {
-  background: url(../Images/shattered.png);
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/shattered.png);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/shattered.png);
   background-size: auto; }
 
 .headerFiller {
   height: 70px; }
+
+.angular-google-map-container {
+  height: 400px; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
@@ -182,8 +187,17 @@ a {
 .form-control {
   border-radius: 0; }
 
+.center-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
 .center-form {
-  width: 33%;
   margin: 2.5% auto; }
 
 .signup-or-separator {

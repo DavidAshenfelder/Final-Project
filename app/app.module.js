@@ -4,16 +4,15 @@ angular.module('MyApp', [
   'ngSanitize',
   'mgcrea.ngStrap',
   'auth',
+  'home',
   'profile',
   'posts',
   'ui.bootstrap',
+  'uiGmapgoogle-maps',
 ])
 
 .config(function($routeProvider) {
   $routeProvider
-    .when('/', {
-      templateUrl: 'home/views/home.html'
-    })
     .when('/404', {
       template: '<h1>Sorry, page not found</h1>'
     })

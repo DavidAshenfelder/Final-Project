@@ -12,7 +12,8 @@
           <section data-ng-repeat="post in postsCtl.posts">
               <h2>{{post.title}}</h2>
               <p>{{post.content | limitTo: 255}}</p>
-              <a href="#/posts/{{post._id}}">view more</a>
+              <h4>{{post.author}}</h4>
+              <a href="#/posts/{{post._id}}">Edit</a>
           </section>
         </div>
       </div>

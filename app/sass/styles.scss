@@ -13,13 +13,17 @@ $lightText: #d4d6d6;
 @import "partials/user-truck-detail";
 
 body {
-  background: url(../Images/shattered.png);
+  background: linear-gradient(to right, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(../Images/shattered.png);
   background-size: auto;
 }
 
 .headerFiller {
   height: 70px;
 }
+
+.angular-google-map-container {
+  height: 400px;
+ }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
@@ -59,8 +63,12 @@ a {
   border-radius: 0;
 }
 
+.center-row {
+  display: flex;
+  justify-content: center;
+}
+
 .center-form {
-  width: 33%;
   margin: 2.5% auto;
 }
 

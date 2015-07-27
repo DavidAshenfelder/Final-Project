@@ -11,11 +11,15 @@
         getPost: getPost,
         createPost: createPost,
         editPost: editPost,
-        deletePost: deletePost
+        deletePost: deletePost,
+        getProfile: getProfile
       };
 
-      function getPosts() {
+     function getProfile() {
+        return $http.get('/api/me');
+      }
 
+      function getPosts() {
         return $http.get('api/collections/demotiy');
       }
 

@@ -3,12 +3,20 @@ var router = express.Router();
 var User = require('../entities/User');
 var config = require('../config');
 var ensureAuthenticated = require('./helpers').ensureAuthenticated;
-
+var _ = require('../app/vendor/lodash/lodash.min.js');
 /*
  |--------------------------------------------------------------------------
  | GET /api/me
  |--------------------------------------------------------------------------
  */
+
+router.route('/allUsers')
+ .get(function (req, res) {
+   User.find({}, function (err, users) {
+     res.send(users);
+   });
+ });
+
 router.route('/me')
   .all(ensureAuthenticated)
   .get(function(req, res) {
@@ -25,10 +33,42 @@ router.route('/me')
       // user.newProperty = req.body.newProperty || user.newProperty
       user.displayName = req.body.displayName || user.displayName;
       user.email = req.body.email || user.email;
+      user.username = req.body.username || user.username;
+      user.truckLocation = req.body.truckLocation || user.truckLocation;
+      user.truckTime = req.body.truckTime || user.truckTime;
+      user.truckImage = req.body.truckImage || user.truckImage;
+      user.truckName = req.body.truckName || user.truckName;
+      user.truckWebsite = req.body.truckWebsite || user.truckWebsite;
+      user.phone = req.body.phone || user.phone;
+      user.active =  req.body.active
       user.save(function(err) {
         res.status(200).end();
       });
     });
   });
+
+  ////////get only trucks///////////
+   router.route('/trucks')
+    .get(function (req, res) {
+      User.find({}, function (err,users) {
+        var trucks = users.filter(function(el) {
+          return el.truck === true;
+        });
+        res.send(trucks);
+      });
+    });
+
+  ////////get only active trucks///////////
+  router.route('/activeTrucks')
+   .get(function (req, res) {
+     User.find({}, function (err,users) {
+       var trucks = users.filter(function(el) {
+         return el.active === true;
+       });
+       res.send(trucks);
+     });
+   });
+
+
 
 module.exports = router;

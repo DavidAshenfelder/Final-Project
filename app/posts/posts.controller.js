@@ -3,8 +3,8 @@
 
   angular
     .module('posts')
-    .controller('postsController', ['postsService', '$location', '$routeParams', '$auth',
-      function(postsService, $location, $routeParams, $auth) {
+    .controller('postsController', ['postsService', '$location', '$routeParams', '$auth', '$scope', '$alert',
+      function(postsService, $location, $routeParams, $auth, $scope, $alert) {
         var postsCtl = this;
         postsCtl.isAuthenticated = function() {
           return $auth.isAuthenticated();
@@ -18,6 +18,7 @@
         });
 
         postsCtl.createPost = function(newPost) {
+          newPost.author = '- ' + $('.postAuthor').val();
           postsService.createPost(newPost);
           $location.path('/posts');
         };
@@ -32,6 +33,19 @@
           $location.path('/posts');
         };
 
+        postsService.getProfile()
+            .success(function(data) {
+              $scope.user = data;
+              $scope.username = data.username;
+            })
+            .error(function(error) {
+              $alert({
+                content: error.message,
+                animation: 'fadeZoomFadeDown',
+                type: 'material',
+                duration: 3
+              });
+        });
 
       }
     ]);

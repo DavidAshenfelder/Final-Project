@@ -1,11 +1,12 @@
+
 .map {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   background-color: $grey;
+  padding: 2%;
   margin: 1%;
-  padding: 1%;
   border-radius: 5px;
   box-shadow: 0 8px 17px rgba(0, 0, 0, 0.8);
 
@@ -20,14 +21,14 @@
   text-align: center;
   color: $text;
   border-bottom: 2px solid $text;
-  font-size: 4vmax;
+  font-size: 2.5vmax;
 }
 
 
 .mapInfoWrapper {
   border-radius: 5px;
+  padding: 2%;
   margin: 1%;
-  padding: 1%;
   height: 100%;
   box-shadow: 0 8px 17px rgba(0, 0, 0, 0.8);
   .activeHeader {
@@ -36,15 +37,15 @@
   }
   background-color: $grey;
   .activeTruckWrapper {
-    background-color: $text;
     border-radius: 5px;
+    padding: 2%;
     .truckWrapper {
-      background-color: $text;
-
+      width: 90%;
     }
   }
   ul {
     padding: 0;
+    width: 100%;
   }
   ul li {
     list-style-type: none;
