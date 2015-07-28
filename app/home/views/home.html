@@ -3,91 +3,27 @@
     <div class="mapPageWrapper">
       <div class="map container panel-default col-md-7">
           <h2>Truck Map</h2>
-          <ui-gmap-google-map center='map.center' zoom='map.zoom' class="col-md-12 col-sm-12 col-xs-12">
+          <ui-gmap-google-map center='map.center' zoom='map.zoom' scrollwheel=false class="col-md-12 col-sm-12 col-xs-12">
 <!--               <ui-gmap-search-box template="searchbox.template" events="searchbox.events" parentdiv="searchbox.parentdiv"></ui-gmap-search-box>
- -->              <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+-->              <ui-gmap-marker coords="truck.truckLocation.coords" idkey="truck._id" ng-repeat="truck in trucks" markerlabel="truck.truckName">
           </ui-gmap-google-map>
       </div>
       <div class="mapInfoWrapper panel-default container col-md-4">
         <div class="headerWrapper">
           <h2 class="activeHeader">Active Trucks</h2>
         </div>
-        <div class="activeTruckWrapper">
+        <div class="activeTruckWrapper" ng-repeat="truck in trucks">
           <accordion class="truckWrapper">
             <accordion-group is-open="status.open">
               <accordion-heading>
-                Taco Shack    <i class=" truckTitle pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                <img src="{{truck.truckImage}}"/>
+                  {{truck.truckName}}<i class=" truckTitle pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
               </accordion-heading>
               <ul>
-                <li class="truckLocation"><h4 class="activeTruckHeaders">Location:</h4> 121 Elm St.</li>
-                <li class="truckTimes"><h4 class="activeTruckHeaders">Time:</h4> 12pm-5pm</li>
-                <li class="truckDescription"><h4 class="activeTruckHeaders">Description:</h4> Fresh tacos made from all local all organic ingredients</li>
-                <li class="truckMessage">Come out and see us for Taco Thursday</li>
-              </ul>
-            </accordion-group>
-          </accordion>
-          <accordion class="truckWrapper">
-            <accordion-group is-open="status.open">
-              <accordion-heading>
-                Taco Shack    <i class=" truckTitle pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-              </accordion-heading>
-              <ul>
-                <li class="truckLocation"><h4 class="activeTruckHeaders">Location:</h4> 121 Elm St.</li>
-                <li class="truckTimes"><h4 class="activeTruckHeaders">Time:</h4> 12pm-5pm</li>
-                <li class="truckDescription"><h4 class="activeTruckHeaders">Description:</h4> Fresh tacos made from all local all organic ingredients</li>
-                <li class="truckMessage">Come out and see us for Taco Thursday</li>
-              </ul>
-            </accordion-group>
-          </accordion>
-          <accordion class="truckWrapper">
-            <accordion-group is-open="status.open">
-              <accordion-heading>
-                Taco Shack    <i class=" truckTitle pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-              </accordion-heading>
-              <ul>
-                <li class="truckLocation"><h4 class="activeTruckHeaders">Location:</h4> 121 Elm St.</li>
-                <li class="truckTimes"><h4 class="activeTruckHeaders">Time:</h4> 12pm-5pm</li>
-                <li class="truckDescription"><h4 class="activeTruckHeaders">Description:</h4> Fresh tacos made from all local all organic ingredients</li>
-                <li class="truckMessage">Come out and see us for Taco Thursday</li>
-              </ul>
-            </accordion-group>
-          </accordion>
-          <accordion class="truckWrapper">
-            <accordion-group is-open="status.open">
-              <accordion-heading>
-                Taco Shack    <i class=" truckTitle pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-              </accordion-heading>
-              <ul>
-                <li class="truckLocation"><h4 class="activeTruckHeaders">Location:</h4> 121 Elm St.</li>
-                <li class="truckTimes"><h4 class="activeTruckHeaders">Time:</h4> 12pm-5pm</li>
-                <li class="truckDescription"><h4 class="activeTruckHeaders">Description:</h4> Fresh tacos made from all local all organic ingredients</li>
-                <li class="truckMessage">Come out and see us for Taco Thursday</li>
-              </ul>
-            </accordion-group>
-          </accordion>
-          <accordion class="truckWrapper">
-            <accordion-group is-open="status.open">
-              <accordion-heading>
-                Taco Shack    <i class=" truckTitle pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-              </accordion-heading>
-              <ul>
-                <li class="truckLocation"><h4 class="activeTruckHeaders">Location:</h4> 121 Elm St.</li>
-                <li class="truckTimes"><h4 class="activeTruckHeaders">Time:</h4> 12pm-5pm</li>
-                <li class="truckDescription"><h4 class="activeTruckHeaders">Description:</h4> Fresh tacos made from all local all organic ingredients</li>
-                <li class="truckMessage">Come out and see us for Taco Thursday</li>
-              </ul>
-            </accordion-group>
-          </accordion>
-          <accordion class="truckWrapper">
-            <accordion-group is-open="status.open">
-              <accordion-heading>
-                Taco Shack    <i class=" truckTitle pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-              </accordion-heading>
-              <ul>
-                <li class="truckLocation"><h4 class="activeTruckHeaders">Location:</h4> 121 Elm St.</li>
-                <li class="truckTimes"><h4 class="activeTruckHeaders">Time:</h4> 12pm-5pm</li>
-                <li class="truckDescription"><h4 class="activeTruckHeaders">Description:</h4> Fresh tacos made from all local all organic ingredients</li>
-                <li class="truckMessage">Come out and see us for Taco Thursday</li>
+                <li class="truckMessage"> <h4>Tweet or Facebook status could go here!</h4> </li>
+                <li class="truckLocation"><h4 class="activeTruckHeaders">Location:</h4>{{truck.truckLocation.address}}</li>
+                <li class="truckTimes"><h4 class="activeTruckHeaders">Time:</h4> {{truck.truckTime}}</li>
+                <li class="truckDescription"><h4 class="activeTruckHeaders">Description:</h4> {{truck.truckDescription}}</li>
               </ul>
             </accordion-group>
           </accordion>

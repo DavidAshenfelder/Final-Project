@@ -1,5 +1,5 @@
 angular.module('profile')
-  .controller('ProfileController', function($scope, $rootScope, $auth, $alert, Account) {
+  .controller('ProfileController', function($scope, $rootScope, $auth, $alert, $modal, Account) {
 
     /**
      * Get user's profile information.
@@ -12,20 +12,23 @@ angular.module('profile')
           $rootScope.active = data.active;
 
         })
-        .error(function(error) {
-          $alert({
-            content: error.message,
-            animation: 'fadeZoomFadeDown',
-            type: 'material',
-            duration: 3
-          });
-        });
+        // .error(function(error) {
+        //   $modal.open({
+        //     content: error.message,
+        //     animation: 'fadeZoomFadeDown',
+        //     type: 'material',
+        //     duration: 3
+        //   });
+        // });
     };
 
     /**
      * Update user's profile information.
      */
     $scope.updateProfile = function() {
+      var user = $scope.user;
+      Account.addTruck(user)
+
       Account.updateProfile({
         displayName: $scope.user.displayName,
         username: $scope.user.username,
@@ -33,16 +36,21 @@ angular.module('profile')
         phone: $scope.user.phone,
         truckWebsite: $scope.user.truckWebsite,
         truckName: $scope.user.truckName,
+        truckDescription: $scope.user.truckDescription,
         truckImage: $scope.user.truckImage,
         truckTime: $scope.user.truckTime,
-        truckLocation: $scope.user.truckLocation,
+        truckLocation: {address: $scope.user.truckLocation.address, coords: {latitude: '', longitude: ''}},
         active: $scope.user.active
+
       }).success(function() {
+        console.log("SUCCESSFUL THINGS");
         $alert({
           content: 'Profile has been updated',
           animation: 'fadeZoomFadeDown',
           type: 'material',
           duration: 3
+        }).error(function(err) {
+          console.log('I HAVE BUBBLED UP', err);
         });
       });
     };
@@ -57,15 +65,13 @@ angular.module('profile')
           type: 'material',
           duration: 3
         });
-      }).then(function () {
-        Account.addTruck()
-      })
+      });
     };
 
     $scope.deactivate = function() {
       Account.updateProfile({
         active: false
-      })
+      });
     };
 
     $scope.deleteProfile = function() {

@@ -1,5 +1,6 @@
 angular.module('profile')
-  .factory('Account', function($http) {
+  .factory('Account', function($http, $rootScope) {
+
     return {
       getProfile: function() {
         return $http.get('/api/me');
@@ -16,15 +17,18 @@ angular.module('profile')
         return $http.put('api/me', active);
       },
 
-      addTruck: function (newTruck) {
+      addTruck: function (user) {
         var geocoder = new google.maps.Geocoder();
-        geocoder.geocode({location: user.location}, function (result) {
-          newTruck.coords = {
-            lat: result[0].geometry.location.lat(),
-            lng: result[0].geometry.location.lng()
+        geocoder.geocode({address: user.truckLocation.address}, function (result) {
+          user.truckLocation.coords = {
+            latitude: result[0].geometry.location.lat(),
+            longitude: result[0].geometry.location.lng()
           };
-          $http.put('api/me', newTruck).success(function (data) {
-            $rootScope.$broadcast('truck:added');
+          console.log('USERS INSIDE', user);
+          
+          return $http.put('/api/me', user).then(function (data) {
+            console.log('hello, user data', data);
+            $rootScope.$broadcast('truckCoords:added');
           });
         });
       }

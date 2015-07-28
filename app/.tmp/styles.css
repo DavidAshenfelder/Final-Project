@@ -87,8 +87,13 @@
   .mapInfoWrapper .activeTruckWrapper {
     border-radius: 5px;
     padding: 2%; }
+    .mapInfoWrapper .activeTruckWrapper img {
+      width: 30px;
+      height: 30px; }
     .mapInfoWrapper .activeTruckWrapper .truckWrapper {
       width: 90%; }
+      .mapInfoWrapper .activeTruckWrapper .truckWrapper i {
+        margin: 5px; }
   .mapInfoWrapper ul {
     padding: 0;
     width: 100%; }

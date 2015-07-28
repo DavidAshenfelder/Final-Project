@@ -31,13 +31,17 @@ function createToken(user) {
 
 router.route('/login')
   .post(function(req, res, next) {
+    console.log("IM RIGHT");
     User.findOne({ email: req.body.email }, '+password', function(err, user, next) {
       if (err) return next(err);
       if (!user) {
         return res.status(401).send({ message: 'Wrong email and/or password' });
       }
       user.comparePassword(req.body.password, function(err, isMatch) {
+        console.log('BODY OF PASSWORD', req.body);
+        console.log("USERS", user);
         if (!isMatch) {
+          console.log("I AM NOT A MATCH");
           return res.status(401).send({ message: 'Wrong email and/or password' });
         }
         res.send({ token: createToken(user) });
@@ -52,7 +56,6 @@ router.route('/login')
  */
  router.route('/signup')
   .post(function(req, res) {
-    console.log("Hi");
     User.findOne({ email: req.body.email }, function(err, existingUser) {
       if (existingUser) {
         return res.status(409).send({ message: 'Email is already taken' });
@@ -62,13 +65,13 @@ router.route('/login')
         // newProperty: req.body.newProperty,
         displayName: req.body.displayName,
         email: req.body.email,
+        password: req.body.password,
         username: req.body.username,
         phone: req.body.phone,
         truck: req.body.truck,
         active: req.body.active,
         truckName: req.body.truckName,
         truckWebsite: req.body.truckWebsite,
-        password: req.body.password,
       });
       console.log(user);
       user.save(function() {

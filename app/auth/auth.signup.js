@@ -4,6 +4,7 @@ angular.module('auth')
       $auth.signup({
         displayName: $scope.displayName,
         username: $scope.username,
+        password: $scope.password,
         email: $scope.email,
         phone: $scope.phone,
         truck: false,

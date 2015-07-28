@@ -39,8 +39,15 @@
   .activeTruckWrapper {
     border-radius: 5px;
     padding: 2%;
+    img {
+      width: 30px;
+      height: 30px;
+    }
     .truckWrapper {
       width: 90%;
+      i {
+        margin: 5px;
+      }
     }
   }
   ul {
