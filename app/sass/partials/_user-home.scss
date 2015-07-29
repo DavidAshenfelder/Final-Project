@@ -8,7 +8,7 @@
   padding: 2%;
   margin: 1%;
   border-radius: 5px;
-  box-shadow: 0 8px 17px rgba(0, 0, 0, 0.8);
+  /* box-shadow: 0 3px 7px rgba(0, 0, 0, 0.8); */
 
   img {
     width: 100%;
@@ -16,12 +16,16 @@
   }
 }
 
+.mapPageWrapper {
+  display: flex;
+justify-content: center;
+}
+
 .panel-default h2 {
   width: 100%;
   text-align: center;
-  color: $text;
-  border-bottom: 2px solid $text;
-  font-size: 2.5vmax;
+  color: $aqua;
+  border-bottom: 2px solid $lightText;
 }
 
 
@@ -29,12 +33,9 @@
   border-radius: 5px;
   padding: 2%;
   margin: 1%;
-  height: 100%;
-  box-shadow: 0 8px 17px rgba(0, 0, 0, 0.8);
-  .activeHeader {
-    border-bottom: 2px solid $text;
-    text-align: center;
-  }
+  height: 520px;
+  overflow: scroll;
+  /* box-shadow: 0 3px 7px rgba(0, 0, 0, 0.8); */
   background-color: $grey;
   .activeTruckWrapper {
     border-radius: 5px;

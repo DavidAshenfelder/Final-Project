@@ -1,6 +1,7 @@
 .navbar {
   border: 0;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8); }
+  border-bottom: 2px solid #d4d6d6;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8); }
 
 .navbar-header {
   float: left;
@@ -13,27 +14,33 @@
 .navbar-nav > li {
   float: left; }
 
-.navbar-nav > li > a {
-  padding: 15px;
-  color: black; }
-
 .navbar-default {
-  color: #fff;
-  background: #343838;
+  background: #606060;
   width: 100%;
   position: fixed;
   top: 0; }
 
 .navbar-default .navbar-brand {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #fff;
-  background-color: #008C9E; }
+  background-color: #00DFFC; }
+  .navbar-default .navbar-brand img {
+    width: 40px;
+    height: 40px; }
 
 .navbar-default .navbar-brand:hover {
-  color: #868989;
-  background-color: #005F6B; }
+  color: #00DFFC;
+  background-color: #727272; }
 
 .navbar-default .navbar-nav > li > a {
-  color: #868989; }
+  color: #d4d6d6; }
   .navbar-default .navbar-nav > li > a:hover {
     color: #00DFFC; }
 
@@ -58,32 +65,39 @@
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  background-color: #343838;
+  background-color: #606060;
   padding: 2%;
   margin: 1%;
   border-radius: 5px;
-  box-shadow: 0 8px 17px rgba(0, 0, 0, 0.8); }
+  /* box-shadow: 0 3px 7px rgba(0, 0, 0, 0.8); */ }
   .map img {
     width: 100%;
     height: 100%; }
 
+.mapPageWrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
 .panel-default h2 {
   width: 100%;
   text-align: center;
-  color: #868989;
-  border-bottom: 2px solid #868989;
-  font-size: 2.5vmax; }
+  color: #00DFFC;
+  border-bottom: 2px solid #d4d6d6; }
 
 .mapInfoWrapper {
   border-radius: 5px;
   padding: 2%;
   margin: 1%;
-  height: 100%;
-  box-shadow: 0 8px 17px rgba(0, 0, 0, 0.8);
-  background-color: #343838; }
-  .mapInfoWrapper .activeHeader {
-    border-bottom: 2px solid #868989;
-    text-align: center; }
+  height: 520px;
+  overflow: scroll;
+  /* box-shadow: 0 3px 7px rgba(0, 0, 0, 0.8); */
+  background-color: #606060; }
   .mapInfoWrapper .activeTruckWrapper {
     border-radius: 5px;
     padding: 2%; }
@@ -100,11 +114,11 @@
   .mapInfoWrapper ul li {
     list-style-type: none;
     text-align: center;
-    color: #343838;
+    color: #606060;
     padding: 0;
     margin: 0; }
     .mapInfoWrapper ul li .activeTruckHeaders {
-      color: #343838; }
+      color: #606060; }
 
 .truck-profile-form {
   display: -webkit-box;
@@ -152,9 +166,8 @@
   margin: 0; }
 
 body {
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/shattered.png);
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/shattered.png);
-  background-size: auto; }
+  /* background: linear-gradient(to right, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(../Images/shattered.png) */
+  background-color: #727272; }
 
 .headerFiller {
   height: 70px; }
@@ -165,29 +178,38 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  color: #868989; }
+  color: #00DFFC; }
 
 a {
-  color: black; }
+  color: #d4d6d6; }
   a:hover {
-    color: #005F6B; }
+    color: #00DFFC; }
 
 .text-muted {
   color: #00DFFC; }
 
 .panel {
   background-color: #d4d6d6;
-  border-radius: 2px;
   padding: 0;
-  box-shadow: 0 8px 17px rgba(0, 0, 0, 0.8); }
+  /* box-shadow: 0 3px 7px rgba(0, 0, 0, .8); */ }
 
-.panel-default .panel-heading {
+.panel-default {
   font-size: 85%;
   font-weight: bold;
   text-transform: uppercase;
-  border-color: #868989;
-  background-color: #343838;
-  color: #d4d6d6; }
+  color: #727272;
+  border: 1px solid #d4d6d6;
+  margin: 1%;
+  border-radius: 5px;
+  /* box-shadow: 0 3px 7px rgba(0, 0, 0, 0.8); */ }
+
+.panel-heading {
+  font-size: 85%;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-color: #727272;
+  background-color: #d4d6d6;
+  color: #606060; }
 
 .form-control {
   border-radius: 0; }
@@ -280,7 +302,7 @@ a {
 
 .btn-primary {
   background-color: #00DFFC;
-  color: #868989;
+  color: #727272;
   border: 1px solid #008C9E; }
 
 .btn-primary:hover {
@@ -288,7 +310,7 @@ a {
 
 .btn-success {
   background-color: #00DFFC;
-  color: #868989;
+  color: #727272;
   border: 1px solid #008C9E; }
 
 .btn-success:hover {

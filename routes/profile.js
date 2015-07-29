@@ -71,6 +71,17 @@ router.route('/me')
      });
    });
 
+   ////////get only active trucks///////////
+   router.route('/inactiveTrucks')
+    .get(function (req, res) {
+      User.find({}, function (err,users) {
+        var trucks = users.filter(function(el) {
+          return el.active === false;
+        });
+        res.send(trucks);
+      });
+    });
+
 
 
 module.exports = router;

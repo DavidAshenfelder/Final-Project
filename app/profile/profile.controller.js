@@ -12,14 +12,14 @@ angular.module('profile')
           $rootScope.active = data.active;
 
         })
-        // .error(function(error) {
-        //   $modal.open({
-        //     content: error.message,
-        //     animation: 'fadeZoomFadeDown',
-        //     type: 'material',
-        //     duration: 3
-        //   });
-        // });
+        .error(function(error) {
+          $modal.open({
+            content: error.message,
+            animation: 'fadeZoomFadeDown',
+            type: 'material',
+            duration: 3
+          });
+        });
     };
 
     /**

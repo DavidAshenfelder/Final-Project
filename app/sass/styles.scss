@@ -1,10 +1,10 @@
 //////Colors///////
-$grey: #343838;
+$grey: #606060;
 $deepTeal: #005F6B;
 $mediumTeal: #008C9E;
 $lightTeal: #3ad9ea;
 $aqua: #00DFFC;
-$text: #868989;
+$text: #727272;
 $lightText: #d4d6d6;
 
 @import "partials/header";
@@ -13,8 +13,8 @@ $lightText: #d4d6d6;
 @import "partials/user-truck-detail";
 
 body {
-  background: linear-gradient(to right, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(../Images/shattered.png);
-  background-size: auto;
+  /* background: linear-gradient(to right, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(../Images/shattered.png) */;
+  background-color: $text;
 }
 
 .headerFiller {
@@ -28,13 +28,13 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  color: $text;
+  color: $aqua;
 }
 
 a {
-  color: black;
+  color: $lightText;
   &:hover {
-    color: $deepTeal;
+    color: $aqua;
   }
 }
 
@@ -45,18 +45,28 @@ a {
 
 .panel {
   background-color: $lightText;
-  border-radius: 2px;
   padding: 0;
-  box-shadow: 0 8px 17px rgba(0, 0, 0, .8);
+  /* box-shadow: 0 3px 7px rgba(0, 0, 0, .8); */
 }
 
-.panel-default .panel-heading {
+.panel-default {
+  font-size: 85%;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $text;
+  border: 1px solid $lightText;
+  margin: 1%;
+  border-radius: 5px;
+  /* box-shadow: 0 3px 7px rgba(0, 0, 0, 0.8); */
+}
+
+.panel-heading {
   font-size: 85%;
   font-weight: bold;
   text-transform: uppercase;
   border-color: $text;
-  background-color: $grey;
-  color: $lightText;
+  background-color: $lightText;
+  color: $grey;
 }
 
 .form-control {

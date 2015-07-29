@@ -1,0 +1,20 @@
+<section class="container">
+  <div class="row">
+    <div class="truckListWrapper" ng-repeat="truck in trucks" data-id="{{truck._id}}">
+      <aside class="truckImage">
+        <img src="{{truck.truckImage}}" class="truckImage">
+      </aside>
+      <aside class="truckInfo">
+        <h1 class="truckTitle">{{truck.truckName}}</h1>
+        <h4 class="description">{{truck.truckDescription}}</h4>
+        <h4 class="truckLocation">{{truck.truckLocation.address}}</h4>
+        <h4 class="truckTime">{{truck.truckTime}}</h4>
+        <div class="truckReviews">
+          <div class="reviewStars">{{review.truckReview}}</div>
+          <div class="reviewTitle">{{review.reviewTitle}}</div>
+
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

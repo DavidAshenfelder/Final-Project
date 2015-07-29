@@ -12,8 +12,8 @@
         <div class="headerWrapper">
           <h2 class="activeHeader">Active Trucks</h2>
         </div>
-        <div class="activeTruckWrapper" ng-repeat="truck in trucks">
-          <accordion class="truckWrapper">
+        <div class="activeTruckWrapper" >
+          <accordion class="truckWrapper" ng-repeat="truck in trucks">
             <accordion-group is-open="status.open">
               <accordion-heading>
                 <img src="{{truck.truckImage}}"/>
@@ -28,7 +28,48 @@
             </accordion-group>
           </accordion>
         </div>
+        <div class="headerWrapper">
+          <h2 class="activeHeader">Inactive Trucks</h2>
+        </div>
+        <div class="activeTruckWrapper" >
+          <accordion class="truckWrapper" ng-repeat="truck in inactiveTrucks">
+            <accordion-group is-open="status.open">
+              <accordion-heading>
+                <img src="{{truck.truckImage}}"/>
+                  {{truck.truckName}}<i class=" truckTitle pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+              </accordion-heading>
+              <ul>
+                <li class="truckMessage"> <h4>Tweet or Facebook status could go here!</h4> </li>
+                <li class="truckDescription"><h4 class="activeTruckHeaders">Description:</h4> {{truck.truckDescription}}</li>
+              </ul>
+            </accordion-group>
+          </accordion>
+        </div>
       </div>
+    </div>
+  </div>
+  <div class="row panel-body" ng-controller="TruckController">
+    <div class="panel-default col-md-12">
+      <section class="container">
+        <div class="row">
+          <div class="truckListWrapper" ng-repeat="truck in trucks" data-id="{{truck._id}}">
+            <aside class="truckImage">
+              <img src="{{truck.truckImage}}" class="truckImage">
+            </aside>
+            <aside class="truckInfo">
+              <h1 class="truckTitle">{{truck.truckName}}</h1>
+              <h4 class="description">{{truck.truckDescription}}</h4>
+              <h4 class="truckLocation">{{truck.truckLocation.address}}</h4>
+              <h4 class="truckTime">{{truck.truckTime}}</h4>
+              <div class="truckReviews">
+                <div class="reviewStars">{{review.truckReview}}</div>
+                <div class="reviewTitle">{{review.reviewTitle}}</div>
+
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </div>

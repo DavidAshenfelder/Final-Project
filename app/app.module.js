@@ -7,6 +7,7 @@ angular.module('MyApp', [
   'home',
   'profile',
   'posts',
+  'truck',
   'ui.bootstrap',
   'uiGmapgoogle-maps',
 ])

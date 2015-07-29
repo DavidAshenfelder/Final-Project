@@ -13,9 +13,15 @@
     return $http.get('/api/activeTrucks');
   };
 
+  var getInactiveTrucks = function() {
+    console.log("Hello, I am getting active Trucks");
+    return $http.get('/api/inactiveTrucks');
+  };
+
   return {
     getProfile: getProfile,
-    active: getActiveTrucks
+    active: getActiveTrucks,
+    inactive: getInactiveTrucks
   };
 });
 

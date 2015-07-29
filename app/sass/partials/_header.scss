@@ -1,6 +1,7 @@
 .navbar {
   border: 0;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .8);
+  border-bottom: 2px solid $lightText;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .8);
 }
 
 .navbar-header {
@@ -18,15 +19,7 @@
 }
 
 
-
-.navbar-nav > li > a {
-  padding: 15px;
-  color: black;
-
-}
-
 .navbar-default {
-  color: #fff;
   background: $grey;
   width: 100%;
   position: fixed;
@@ -34,17 +27,23 @@
 }
 
 .navbar-default .navbar-brand {
+  display: flex;
+  align-items: center;
   color: #fff;
-  background-color: $mediumTeal;
+  background-color: $aqua;
+  img {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .navbar-default .navbar-brand:hover {
-  color: $text;
-  background-color: $deepTeal;
+  color: $aqua;
+  background-color: $text;
 }
 
 .navbar-default .navbar-nav>li>a {
-  color: $text;
+  color: $lightText;
   &:hover {
     color: $aqua;
   }

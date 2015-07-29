@@ -17,5 +17,10 @@
           console.log(trucks.data);
           $scope.trucks = trucks.data
         })
+        HomeService.inactive().then(function(trucks) {
+          console.log("I am getting inactive trucks");
+          console.log(trucks.data);
+          $scope.inactiveTrucks = trucks.data
+        })
     });
 }());
