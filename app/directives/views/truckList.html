@@ -1,0 +1,12 @@
+<div class="panel-default row">
+  <div class="truckListWrapper" ng-repeat="truck in trucks" data-id="{{truck._id}}">
+    <aside class="truckImage" style='background-image:url({{truck.truckImage}})'>
+      <img src="{{truck.truckImage}}" class="truckImage">
+    </aside>
+    <aside class="truckInfo">
+      <h1 class="truckTitle">{{truck.truckName}}</h1>
+      <h4 class="truckLocation">{{truck.truckLocation.address}}</h4>
+      </div>
+    </aside>
+  </div>
+</div>

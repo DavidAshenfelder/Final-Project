@@ -27,7 +27,7 @@ angular.module('profile')
      */
     $scope.updateProfile = function() {
       var user = $scope.user;
-      Account.addTruck(user)
+      Account.addTruck(user);
 
       Account.updateProfile({
         displayName: $scope.user.displayName,
@@ -43,14 +43,12 @@ angular.module('profile')
         active: $scope.user.active
 
       }).success(function() {
-        console.log("SUCCESSFUL THINGS");
         $alert({
           content: 'Profile has been updated',
           animation: 'fadeZoomFadeDown',
           type: 'material',
           duration: 3
         }).error(function(err) {
-          console.log('I HAVE BUBBLED UP', err);
         });
       });
     };

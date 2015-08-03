@@ -10,15 +10,17 @@ $lightText: #d4d6d6;
 @import "partials/header";
 @import "partials/user-home";
 @import "partials/user-profile";
+@import "partials/user-truck-list";
 @import "partials/user-truck-detail";
 
+
 body {
-  /* background: linear-gradient(to right, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(../Images/shattered.png) */;
+  background: linear-gradient(to right, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(../Images/shattered.png) fixed;
   background-color: $text;
 }
 
 .headerFiller {
-  height: 70px;
+  height: 50px;
 }
 
 .angular-google-map-container {
@@ -42,6 +44,10 @@ a {
   color: $aqua;
 }
 
+.container-fluid {
+  padding: 0;
+}
+
 
 .panel {
   background-color: $lightText;
@@ -58,6 +64,10 @@ a {
   margin: 1%;
   border-radius: 5px;
   /* box-shadow: 0 3px 7px rgba(0, 0, 0, 0.8); */
+}
+
+.panel-body {
+  padding: 0;
 }
 
 .panel-heading {

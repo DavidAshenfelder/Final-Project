@@ -7,8 +7,8 @@
   background-color: $grey;
   padding: 2%;
   margin: 1%;
-  border-radius: 5px;
-  /* box-shadow: 0 3px 7px rgba(0, 0, 0, 0.8); */
+  border-radius: 2px;
+  opacity: .9;
 
   img {
     width: 100%;
@@ -18,7 +18,10 @@
 
 .mapPageWrapper {
   display: flex;
-justify-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: radial-gradient( rgba(0, 0, 0, .2), rgba(0, 0, 0, 1)), url('../Images/Truck-Skyline.jpg') no-repeat no-repeat fixed;
+  background-size: cover;
 }
 
 .panel-default h2 {
@@ -35,10 +38,11 @@ justify-content: center;
   margin: 1%;
   height: 520px;
   overflow: scroll;
+  opacity: .9;
   /* box-shadow: 0 3px 7px rgba(0, 0, 0, 0.8); */
   background-color: $grey;
   .activeTruckWrapper {
-    border-radius: 5px;
+    border-radius: 2px;
     padding: 2%;
     img {
       width: 30px;
@@ -64,5 +68,75 @@ justify-content: center;
     .activeTruckHeaders {
       color: $grey;
     }
+  }
+}
+
+.trucksWrapper {
+  height: 200px;
+  width: 100%;
+  margin: 2px;
+  padding: 2px;
+  border: 1px solid $lightText;
+  overflow-wrap: break-word;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  &:hover {
+    border: 1px solid $aqua;
+    transition: ease .25s;
+  }
+}
+
+.trucksContainer {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  margin-top: 5%;
+  a {
+    overflow-wrap: break-word;
+  }
+
+}
+
+.trucksRow {
+  background-color: $grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  .allTrucksLink {
+    width: 100%;
+    text-align: center;
+    background-color: $lightText;
+  }
+}
+
+.trucksContainer2 {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  margin-top: 5%;
+  background: radial-gradient( rgba(0, 0, 0, .2), rgba(0, 0, 0, 1)), url('../Images/Food-Truck-Festival.jpg') no-repeat no-repeat fixed;
+  background-size: cover;
+  a {
+    overflow-wrap: break-word;
+  }
+
+}
+
+.trucksRow2 {
+  background-color: $grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  opacity: .8;
+  .allTrucksLink {
+    width: 100%;
+    text-align: center;
+    background-color: $lightText;
   }
 }

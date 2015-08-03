@@ -1,20 +1,14 @@
-<section class="container">
-  <div class="row">
-    <div class="truckListWrapper" ng-repeat="truck in trucks" data-id="{{truck._id}}">
-      <aside class="truckImage">
-        <img src="{{truck.truckImage}}" class="truckImage">
-      </aside>
-      <aside class="truckInfo">
-        <h1 class="truckTitle">{{truck.truckName}}</h1>
-        <h4 class="description">{{truck.truckDescription}}</h4>
-        <h4 class="truckLocation">{{truck.truckLocation.address}}</h4>
-        <h4 class="truckTime">{{truck.truckTime}}</h4>
-        <div class="truckReviews">
-          <div class="reviewStars">{{review.truckReview}}</div>
-          <div class="reviewTitle">{{review.reviewTitle}}</div>
-
+<section class="container truckListContainer col-md-12">
+  <div class="row truckListRow">
+        <div class="truckListWrapper col-md-5" data-id="{{truck._id}}" ng-repeat="truck in trucks" ng-click="getTruck(truck._id)" style='background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{truck.truckImage}}) no-repeat no-repeat center; background-size: cover;'>
+          <aside class="truckInfo">
+            <h1 class="truckTitle">{{truck.truckName}}</h1>
+            <p class="description">{{truck.truckDescription}}</p>
+            <div class="truckReviews">
+              <div class="reviewStars">{{review.truckReview}}</div>
+              <div class="reviewTitle">{{review.reviewTitle}}</div>
+            </div>
+          </aside>
         </div>
-      </aside>
-    </div>
   </div>
 </section>

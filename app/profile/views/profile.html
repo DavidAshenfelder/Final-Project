@@ -1,123 +1,128 @@
-<div class="container">
-  <div class="panel panel-default">
-    <div class="panel-heading">Location</div>
-    <div class="panel-body">
-      <legend class="profileLegend"><i class="ion-clipboard"></i> Edit Truck Location</legend>
-      <form method="post" ng-submit="updateProfile()">
-        <div class="activateButtons">
-          <button class="btn btn-lg btn-success" value=true ng-click="updateProfile(user.active = true)">Activate</button>
-          <button class="btn btn-lg btn-success" value=false ng-click="updateProfile(user.active = false)">Deactivate</button>
-        </div>
-        <div class="form-group">
-          <label class="control-label"> Active</label>
-          <input type="text" class="form-control" ng-model="user.active">
-        </div>
-        <div class="form-group">
-          <label class="control-label"> Location</label>
-          <input type="text" class="form-control" ng-model="user.truckLocation.address" />
-        </div>
-        <div class="form-group">
-          <label class="control-label"></i> Time</label>
-          <input type="text" class="form-control" ng-model="user.truckTime" />
-        </div>
-        <div class="form-group">
-        </div>
-        <button class="btn btn-lg btn-success">Update Information</button>
-      </form>
-    </div>
-  </div>
-</div>
-<div class="container">
-  <div class="panel panel-default">
-    <div class="panel-heading">Truck</div>
-    <div class="panel-body">
-      <legend><i class="ion-clipboard"></i> Edit Truck Info</legend>
-      <form method="post" ng-submit="updateProfile()">
-        <div class="form-group profile-pic-wrapper">
-          <label class="control-label">Truck Picture</label>
-          <img class="profile-picture" ng-src="{{user.truckImage || 'http://placehold.it/100x100'}}">
-          <label class="control-label"> Image Url</label>
-          <input type="text" class="form-control" ng-model="user.truckImage" />
-        </div>
-        <div class="form-group">
-          <label class="control-label"><i class="ion-person"></i> Truck Name</label>
-          <input type="text" class="form-control" ng-model="user.truckName" />
-        </div>
-        <div class="form-group">
-          <label class="control-label"><i class="ion-person"></i> Truck Description</label>
-          <input type="text" class="form-control" ng-model="user.truckDescription" />
-        </div>
-        <div class="form-group">
-          <label class="control-label"> Website</label>
-          <input type="text" class="form-control" ng-model="user.truckWebsite" />
-        </div>
-        <div class="form-group">
-        </div>
-        <button class="btn btn-lg btn-success">Update Information</button>
-      </form>
-    </div>
-  </div>
-</div>
-<div class="container">
-  <div class="panel panel-default">
-    <div class="panel-heading">Personal Profile</div>
-    <div class="panel-body">
-      <legend><i class="ion-clipboard"></i> Edit My Profile</legend>
-      <form method="post" ng-submit="updateProfile()">
-        <div class="form-group">
-          <label class="control-label">Profile Picture</label>
-          <img class="profile-picture" ng-src="{{user.picture || 'http://placehold.it/100x100'}}">
-        </div>
-        <div class="form-group">
-          <label class="control-label"><i class="ion-person"></i> Name</label>
-          <input type="text" class="form-control" ng-model="user.displayName" />
-        </div>
-        <div class="form-group">
-          <label class="control-label">Username</label>
-          <input type="text" class="form-control" ng-model="user.username" />
-        </div>
-        <div class="form-group">
-          <label class="control-label"><i class="ion-at"></i> Email Address</label>
-          <input type="email" class="form-control" ng-model="user.email" />
-        </div>
-        <div class="form-group">
-          <label class="control-label"> Phone</label>
-          <input type="text" class="form-control" ng-model="user.phone" />
-        </div>
-        <button class="btn btn-lg btn-success">Update Information</button>
-      </form>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="panel panel-default">
-    <div class="panel-heading">Accounts</div>
-    <div class="panel-body">
-      <legend><i class="ion-link"></i> Linked Accounts</legend>
-      <div class="btn-group-vertical">
-        <button class="btn btn-sm btn-danger" ng-if="user.facebook" ng-click="unlink('facebook')">
-          <i class="ion-social-facebook"></i> Unlink Facebook Account
-        </button>
-        <button class="btn btn-sm btn-primary" ng-if="!user.facebook" ng-click="link('facebook')">
-          <i class="ion-social-facebook"></i> Link Facebook Account
-        </button>
-        <button class="btn btn-lg btn-success" ng-click="deleteProfile(user.id)">Delete Account</button>
-
-        <!-- <button class="btn btn-sm btn-danger" ng-if="user.google" ng-click="unlink('google')">
-          <i class="ion-social-googleplus"></i> Unlink Google Account
-        </button>
-        <button class="btn btn-sm btn-primary" ng-if="!user.google" ng-click="link('google')">
-          <i class="ion-social-googleplus"></i> Link Google Account
-        </button>
-        <button class="btn btn-sm btn-danger" ng-if="user.twitter" ng-click="unlink('twitter')">
-          <i class="ion-social-twitter"></i> Unlink Twitter Account
-        </button>
-        <button class="btn btn-sm btn-primary" ng-if="!user.twitter" ng-click="link('twitter')">
-          <i class="ion-social-twitter"></i> Link Twitter Account
-        </button> -->
+<div class="profile-wrapper">
+  <div class="container profile-container" ng-if="user.truck === true">
+    <div class="panel panel-default">
+      <div class="panel-heading">Location</div>
+      <div class="panel-body">
+        <legend class="profileLegend"><i class="ion-clipboard"></i> Edit Truck Location</legend>
+        <form method="post" ng-submit="updateProfile()">
+          <div class="activateButtons">
+      <a class="twitter-share-button"
+        href="https://twitter.com/intent/tweet">
+      Tweet</a>
+            <button class="btn btn-lg btn-success" value=true ng-click="updateProfile(user.active = true)">Activate</button>
+            <button class="btn btn-lg btn-success" value=false ng-click="updateProfile(user.active = false)">Deactivate</button>
+          </div>
+          <div class="form-group">
+            <label class="control-label"> Active</label>
+            <input type="text" class="form-control" ng-model="user.active">
+          </div>
+          <div class="form-group">
+            <label class="control-label"> Location</label>
+            <input type="text" class="form-control" ng-model="user.truckLocation.address" />
+          </div>
+          <div class="form-group">
+            <label class="control-label"></i> Time</label>
+            <input type="text" class="form-control" ng-model="user.truckTime" />
+          </div>
+          <div class="form-group">
+          </div>
+          <button class="btn btn-lg btn-success">Update Information</button>
+        </form>
       </div>
     </div>
   </div>
-</div>
+  <div class="container profile-container" ng-if="user.truck === true">
+    <div class="panel panel-default">
+      <div class="panel-heading">Truck</div>
+      <div class="panel-body">
+        <legend><i class="ion-clipboard"></i> Edit Truck Info</legend>
+        <form method="post" ng-submit="updateProfile()">
+          <div class="form-group profile-pic-wrapper">
+            <label class="control-label">Truck Picture</label>
+            <img class="profile-picture" ng-src="{{user.truckImage || 'http://placehold.it/100x100'}}">
+            <label class="control-label"> Image Url</label>
+            <input type="text" class="form-control" ng-model="user.truckImage" />
+          </div>
+          <div class="form-group">
+            <label class="control-label"><i class="ion-person"></i> Truck Name</label>
+            <input type="text" class="form-control" ng-model="user.truckName" />
+          </div>
+          <div class="form-group">
+            <label class="control-label"><i class="ion-person"></i> Truck Description</label>
+            <input type="text" class="form-control" ng-model="user.truckDescription" />
+          </div>
+          <div class="form-group">
+            <label class="control-label"> Website</label>
+            <input type="text" class="form-control" ng-model="user.truckWebsite" />
+          </div>
+          <div class="form-group">
+          </div>
+          <button class="btn btn-lg btn-success">Update Information</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container profile-container">
+    <div class="panel panel-default">
+      <div class="panel-heading">Profile</div>
+      <div class="panel-body">
+        <legend><i class="ion-clipboard"></i> Edit My Profile</legend>
+        <form method="post" ng-submit="updateProfile()">
+          <div class="form-group">
+            <label class="control-label">Profile Picture</label>
+            <img class="profile-picture" ng-src="{{user.picture || 'http://placehold.it/100x100'}}">
+          </div>
+          <div class="form-group">
+            <label class="control-label"><i class="ion-person"></i> Name</label>
+            <input type="text" class="form-control" ng-model="user.displayName" />
+          </div>
+          <div class="form-group">
+            <label class="control-label">Username</label>
+            <input type="text" class="form-control" ng-model="user.username" />
+          </div>
+          <div class="form-group">
+            <label class="control-label"><i class="ion-at"></i> Email Address</label>
+            <input type="email" class="form-control" ng-model="user.email" />
+          </div>
+          <div class="form-group">
+            <label class="control-label"> Phone</label>
+            <input type="text" class="form-control" ng-model="user.phone" />
+          </div>
+          <button class="btn btn-lg btn-success">Update Information</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="container profile-container">
+    <div class="panel panel-default">
+      <div class="panel-heading">Accounts</div>
+      <div class="panel-body">
+        <legend><i class="ion-link"></i> Linked Accounts</legend>
+        <div class="btn-group-vertical">
+          <button class="btn btn-sm btn-danger" ng-if="user.facebook" ng-click="unlink('facebook')">
+            <i class="ion-social-facebook"></i> Unlink Facebook Account
+          </button>
+          <button class="btn btn-sm btn-primary" ng-if="!user.facebook" ng-click="link('facebook')">
+            <i class="ion-social-facebook"></i> Link Facebook Account
+          </button>
+          <button class="btn btn-lg btn-success" ng-click="deleteProfile(user.id)">Delete Account</button>
+
+          <!-- <button class="btn btn-sm btn-danger" ng-if="user.google" ng-click="unlink('google')">
+            <i class="ion-social-googleplus"></i> Unlink Google Account
+          </button>
+          <button class="btn btn-sm btn-primary" ng-if="!user.google" ng-click="link('google')">
+            <i class="ion-social-googleplus"></i> Link Google Account
+          </button>
+          <button class="btn btn-sm btn-danger" ng-if="user.twitter" ng-click="unlink('twitter')">
+            <i class="ion-social-twitter"></i> Unlink Twitter Account
+          </button>
+          <button class="btn btn-sm btn-primary" ng-if="!user.twitter" ng-click="link('twitter')">
+            <i class="ion-social-twitter"></i> Link Twitter Account
+          </button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 </div>

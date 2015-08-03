@@ -1,75 +1,88 @@
 <div class="container-fluid" >
-  <div class="panel-body row">
-    <div class="mapPageWrapper">
-      <div class="map container panel-default col-md-7">
+  <div class="panel-body row mapPageWrapper">
+      <div class="map container panel-default col-md-7 col-sm-12 col-xs-12">
           <h2>Truck Map</h2>
-          <ui-gmap-google-map center='map.center' zoom='map.zoom' scrollwheel=false class="col-md-12 col-sm-12 col-xs-12">
-<!--               <ui-gmap-search-box template="searchbox.template" events="searchbox.events" parentdiv="searchbox.parentdiv"></ui-gmap-search-box>
--->              <ui-gmap-marker coords="truck.truckLocation.coords" idkey="truck._id" ng-repeat="truck in trucks" markerlabel="truck.truckName">
+          <ui-gmap-google-map center='map.center' zoom='map.zoom' fit=true scrollwheel=false class="col-md-12 col-sm-12 col-xs-12">
+<!--                <ui-gmap-search-box></ui-gmap-search-box>
+ --><!--                <ui-gmap-window><ui-gmap-window>
+ -->             <ui-gmap-marker coords="truck.truckLocation.coords" icon="''" idkey="truck._id" ng-repeat="truck in activeTrucks"></ui-gmap-marker>
           </ui-gmap-google-map>
       </div>
-      <div class="mapInfoWrapper panel-default container col-md-4">
-        <div class="headerWrapper">
-          <h2 class="activeHeader">Active Trucks</h2>
-        </div>
-        <div class="activeTruckWrapper" >
-          <accordion class="truckWrapper" ng-repeat="truck in trucks">
-            <accordion-group is-open="status.open">
-              <accordion-heading>
-                <img src="{{truck.truckImage}}"/>
-                  {{truck.truckName}}<i class=" truckTitle pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-              </accordion-heading>
-              <ul>
-                <li class="truckMessage"> <h4>Tweet or Facebook status could go here!</h4> </li>
-                <li class="truckLocation"><h4 class="activeTruckHeaders">Location:</h4>{{truck.truckLocation.address}}</li>
-                <li class="truckTimes"><h4 class="activeTruckHeaders">Time:</h4> {{truck.truckTime}}</li>
-                <li class="truckDescription"><h4 class="activeTruckHeaders">Description:</h4> {{truck.truckDescription}}</li>
-              </ul>
-            </accordion-group>
-          </accordion>
-        </div>
-        <div class="headerWrapper">
-          <h2 class="activeHeader">Inactive Trucks</h2>
-        </div>
-        <div class="activeTruckWrapper" >
-          <accordion class="truckWrapper" ng-repeat="truck in inactiveTrucks">
-            <accordion-group is-open="status.open">
-              <accordion-heading>
-                <img src="{{truck.truckImage}}"/>
-                  {{truck.truckName}}<i class=" truckTitle pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-              </accordion-heading>
-              <ul>
-                <li class="truckMessage"> <h4>Tweet or Facebook status could go here!</h4> </li>
-                <li class="truckDescription"><h4 class="activeTruckHeaders">Description:</h4> {{truck.truckDescription}}</li>
-              </ul>
-            </accordion-group>
-          </accordion>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row panel-body" ng-controller="TruckController">
-    <div class="panel-default col-md-12">
-      <section class="container">
-        <div class="row">
-          <div class="truckListWrapper" ng-repeat="truck in trucks" data-id="{{truck._id}}">
-            <aside class="truckImage">
-              <img src="{{truck.truckImage}}" class="truckImage">
-            </aside>
-            <aside class="truckInfo">
-              <h1 class="truckTitle">{{truck.truckName}}</h1>
-              <h4 class="description">{{truck.truckDescription}}</h4>
-              <h4 class="truckLocation">{{truck.truckLocation.address}}</h4>
-              <h4 class="truckTime">{{truck.truckTime}}</h4>
-              <div class="truckReviews">
-                <div class="reviewStars">{{review.truckReview}}</div>
-                <div class="reviewTitle">{{review.reviewTitle}}</div>
-
-              </div>
-            </aside>
+      <div class="mapInfoWrapper panel-default container col-md-4 col-sm-12 col-xs-12">
+        <div class="listWapper col-sm-6 col-md-12">
+          <div class="headerWrapper">
+            <h2 class="activeHeader">Active Trucks</h2>
+          </div>
+          <div class="activeTruckWrapper" >
+            <accordion class="truckWrapper" ng-repeat="truck in activeTrucks">
+              <accordion-group is-open="status.open">
+                <accordion-heading>
+                  <img src="{{truck.truckImage}}"/>
+                    {{truck.truckName}}<i class=" truckTitle pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                </accordion-heading>
+                <ul>
+                  <li class="truckMessage"> <h4>Tweet or Facebook status could go here!</h4> </li>
+                  <li class="truckLocation"><h4 class="activeTruckHeaders">Location:</h4>{{truck.truckLocation.address}}</li>
+                  <li class="truckTimes"><h4 class="activeTruckHeaders">Time:</h4> {{truck.truckTime}}</li>
+                  <li class="truckDescription"><h4 class="activeTruckHeaders">Description:</h4> {{truck.truckDescription}}</li>
+                </ul>
+              </accordion-group>
+            </accordion>
           </div>
         </div>
+        <div class="listWrapper col-sm-6 col-md-12">
+          <div class="headerWrapper">
+            <h2 class="activeHeader">Inactive Trucks</h2>
+          </div>
+          <div class="activeTruckWrapper" >
+            <accordion class="truckWrapper" ng-repeat="truck in inactiveTrucks">
+              <accordion-group is-open="status.open">
+                <accordion-heading>
+                  <img src="{{truck.truckImage}}"/>
+                    {{truck.truckName}}<i class=" truckTitle pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                </accordion-heading>
+                <ul>
+                  <li class="truckMessage"> <h4>Tweet or Facebook status could go here!</h4> </li>
+                  <li class="truckDescription"><h4 class="activeTruckHeaders">Description:</h4> {{truck.truckDescription}}</li>
+                </ul>
+              </accordion-group>
+            </accordion>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="panel-body">
+      <section class="container-fluid trucksContainer">
+<!-- <truck-list ng-repeat="truck in trucks" truck="truck"></truck-list>-->
+      <div class="panel-default trucksRow row col-md-12 col-sm-12 col-xs-12">
+        <h2>Trucks</h2>
+        <a href="/#/trucks" ng-repeat="truck in trucks | limitTo : 10" class="col-md-3 col-sm-5 col-xs-12">
+          <div class="trucksWrapper" data-id="{{truck._id}}"  style='background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{truck.truckImage}}) no-repeat no-repeat center; background-size: cover;'>
+            <div class="truckInfo">
+              <h1 class="truckTitle">{{truck.truckName}}</h1>
+            </div>
+          </div>
+        </a>
+        <a class="allTrucksLink" href="/#/trucks"><h4>All Trucks</h4></a>
+      </div>
       </section>
     </div>
+    <div class="panel-body">
+        <section class="container-fluid trucksContainer2">
+  <!-- <truck-list ng-repeat="truck in trucks" truck="truck"></truck-list>-->
+        <div class="panel-default trucksRow2 row col-md-12 col-sm-12 col-xs-12">
+          <h2>Truck Events</h2>
+
+          <a href="/#/trucks" ng-repeat="truck in trucks | limitTo : 10" class="col-md-3 col-sm-5 col-xs-12">
+            <div class="trucksWrapper" data-id="{{truck._id}}"  style='background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{truck.truckImage}}) no-repeat no-repeat center; background-size: cover;'>
+              <div class="truckInfo">
+                <h1 class="truckTitle">{{truck.truckName}}</h1>
+              </div>
+            </div>
+          </a>
+          <a class="allTrucksLink" href="/#/trucks"><h4>All Trucks</h4></a>
+        </div>
+        </section>
+      </div>
   </div>
 </div>

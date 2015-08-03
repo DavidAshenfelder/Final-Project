@@ -8,5 +8,10 @@
           templateUrl: 'truck/views/list.html',
           controller: 'TruckController',
         });
+        $routeProvider
+          .when('/trucks/:_id', {
+            templateUrl: 'truck/views/detail.html',
+            controller: 'TruckController',
+          });
     });
 }());

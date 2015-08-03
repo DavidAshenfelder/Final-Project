@@ -3,12 +3,16 @@ var router = express.Router();
 var User = require('../entities/User');
 var config = require('../config');
 var ensureAuthenticated = require('./helpers').ensureAuthenticated;
-var _ = require('../app/vendor/lodash/lodash.min.js');
+var _ = require('../app/vendor/underscore/underscore-min.js');
 /*
  |--------------------------------------------------------------------------
  | GET /api/me
  |--------------------------------------------------------------------------
  */
+router.param('truckId', function(req, res, next, truckId) {
+  next()
+})
+
 
 router.route('/allUsers')
  .get(function (req, res) {
@@ -81,6 +85,15 @@ router.route('/me')
         res.send(trucks);
       });
     });
+
+    ////////get only trucks///////////
+     router.route('/trucks/:truckId')
+      .get(function (req, res) {
+        User.findById(req.params.truckId, function(err, truck) {
+          console.log('truck in router', truck);
+          res.send(truck);
+        });
+      });
 
 
 

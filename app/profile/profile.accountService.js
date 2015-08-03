@@ -24,10 +24,8 @@ angular.module('profile')
             latitude: result[0].geometry.location.lat(),
             longitude: result[0].geometry.location.lng()
           };
-          console.log('USERS INSIDE', user);
-          
+
           return $http.put('/api/me', user).then(function (data) {
-            console.log('hello, user data', data);
             $rootScope.$broadcast('truckCoords:added');
           });
         });

@@ -1,0 +1,33 @@
+.truckListWrapper {
+  height: 200px;
+  margin: 2px;
+  border: 3px solid $lightText;
+  overflow-wrap: break-word;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  &:hover {
+    border: 3px solid $aqua;
+    transition: ease .25s;
+  }
+}
+
+.truckListContainer {
+  a {
+    overflow-wrap: break-word;
+  }
+}
+
+.truckListRow {
+  height: auto;
+  overflow: hidden;
+  background-color: $grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: radial-gradient( rgba(0, 0, 0, .6), rgba(0, 0, 0, 1)), url('../Images/Food-Truck-Collage.jpg') fixed;
+
+
+}

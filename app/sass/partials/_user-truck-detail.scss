@@ -1,0 +1,125 @@
+.truck-detail-wrapper {
+  padding: 2%;
+}
+
+
+
+.truck-info-aside {
+  display: flex;
+  flex-wrap: wrap;
+  .pic-and-header-wrapper {
+    width: 100%;
+    border-bottom: 2px solid $lightText;
+    img {
+      border: 3px solid $aqua;
+      width: 100%;
+      margin-top: 2%;
+      margin-bottom: 2%;
+    }
+  }
+  .truck-info-wrapper {
+    width: 100%;
+    border-bottom: 2px solid $lightText;
+  }
+}
+
+.social-wrapper {
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid $lightText;
+  .bird-wrapper {
+    width: 100%;
+    text-align: center;
+    .fa-twitter {
+      font-size: 5vmax;
+      border-radius: 100%;
+      border: 3px solid $aqua;
+      color: $aqua;
+      padding: 10px;
+      margin: 10px;
+    }
+  }
+}
+
+.logo-wrapper {
+  width: 200px;
+  height: 200px;
+  border: 3px solid $aqua;
+  border-radius: 100%;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 15px;
+  text-align: center;
+  h1 {
+    color: $grey;
+    .fa-heart-o {
+      font-size: 32px;
+      width: 100%;
+    }
+  }
+    &:hover {
+      cursor: pointer;
+      h1 {color: red;
+      transition: ease .5s;
+      font-size: 48px;
+      }
+      .fa-heart-o {
+        font-size: 48px;
+        color: red;
+        transition: ease .5s;
+      }
+    }
+}
+
+.truck-logo {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: url('../Images/truck-logo.png') no-repeat no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+}
+
+.truck-info-aside {
+  display: inline-flex;
+  justify-content: center;
+
+}
+
+.socialAside {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .twitter-feed {
+    color: $grey;
+  }
+}
+
+.reviews-wrapper {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 2px solid $lightText;
+  width: 100%;
+  .review-star {
+    font-size: 32px;
+  }
+  .add-review {
+    margin: 5px;
+  }
+  .float-right {
+    float: right;
+    border-radius: 100%;
+    margin: 5px;
+  }
+  .review-form {
+    margin-top: 15px;
+  }
+}
