@@ -6,8 +6,7 @@
             <ui-gmap-marker model="marker" ng-repeat="marker in markers" coords="marker.coords" idkey="marker.idKey" options="marker.options">
               <ui-gmap-window isIconVisibleOnClick="true" coords="marker.coords">
                 <div>
-                  <h6>{{marker.truckName}}</h6>
-                  <h6>{{marker.truckTime}}</h6>
+                  <h6>{{marker.truckName}} | Time:{{marker.truckTime}}</h6>
                   <img src="{{marker.truckImage}}" alt="">
                 </div>
              </ui-gmap-window>
@@ -31,6 +30,7 @@
                   <li class="truckLocation"><h4 class="activeTruckHeaders">Location:</h4>{{truck.truckLocation.address}}</li>
                   <li class="truckTimes"><h4 class="activeTruckHeaders">Time:</h4> {{truck.truckTime}}</li>
                   <li class="truckDescription"><h4 class="activeTruckHeaders">Description:</h4> {{truck.truckDescription}}</li>
+                  <a href="#/trucks/{{truck._id}}"><h6>View More</h6></a>
                 </ul>
               </accordion-group>
             </accordion>

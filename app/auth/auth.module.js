@@ -40,7 +40,7 @@ angular.module('auth', ['ngMessages', 'ngRoute', 'mgcrea.ngStrap', 'satellizer']
     });
 
     $authProvider.google({
-      clientId: '587791673437-u2c6ujn8ct3nihm0vaq9cb0f0ukd33f2.apps.googleusercontent.com'
+      clientId: '964127310171-85u588t2pfc8kc1768v67v9n4ekhbanm.apps.googleusercontent.com'
     });
 
     $authProvider.github({

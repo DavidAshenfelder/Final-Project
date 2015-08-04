@@ -1,6 +1,6 @@
 .navbar {
   border: 0;
-  border-bottom: 2px solid #d4d6d6;
+  /* border-bottom: 2px solid $lightText; */
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8); }
 
 .navbar-header {
@@ -68,7 +68,7 @@
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  background-color: #606060;
+  background-color: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), black);
   padding: 2%;
   margin: 1%;
   border-radius: 2px;
@@ -91,7 +91,8 @@
           flex-wrap: wrap;
   background: -webkit-radial-gradient(rgba(0, 0, 0, 0.2), black), url("../Images/Truck-Skyline.jpg") no-repeat no-repeat fixed;
   background: radial-gradient(rgba(0, 0, 0, 0.2), black), url("../Images/Truck-Skyline.jpg") no-repeat no-repeat fixed;
-  background-size: cover; }
+  background-size: cover;
+  height: 650px; }
 
 .panel-default h2 {
   width: 100%;
@@ -103,11 +104,10 @@
   border-radius: 5px;
   padding: 2%;
   margin: 1%;
-  height: 520px;
+  height: 624px;
   overflow: scroll;
   opacity: .9;
-  /* box-shadow: 0 3px 7px rgba(0, 0, 0, 0.8); */
-  background-color: #606060; }
+  /* box-shadow: 0 3px 7px rgba(0, 0, 0, 0.8); */ }
   .mapInfoWrapper .activeTruckWrapper {
     border-radius: 2px;
     padding: 2%; }
@@ -121,6 +121,8 @@
   .mapInfoWrapper ul {
     padding: 0;
     width: 100%; }
+    .mapInfoWrapper ul h6 {
+      text-align: center; }
   .mapInfoWrapper ul li {
     list-style-type: none;
     text-align: center;
@@ -205,12 +207,12 @@
   margin-top: 5%;
   background: -webkit-radial-gradient(rgba(0, 0, 0, 0.2), black), url("../Images/Food-Truck-Festival.jpg") no-repeat no-repeat fixed;
   background: radial-gradient(rgba(0, 0, 0, 0.2), black), url("../Images/Food-Truck-Festival.jpg") no-repeat no-repeat fixed;
-  background-size: cover; }
+  background-size: cover;
+  height: 650px; }
   .trucksContainer2 a {
     overflow-wrap: break-word; }
 
 .trucksRow2 {
-  background-color: #606060;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -298,10 +300,6 @@
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: center; }
   .truckListWrapper:hover {
     border: 3px solid #00DFFC;
