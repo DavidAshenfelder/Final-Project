@@ -8,8 +8,20 @@ angular.module('truck')
       },
 
       getTruck: function(id) {
-        console.log('Im in the getTruck Service', id);
         return $http.get('/api/trucks/' + id);
+      },
+
+      addReview: function (id, truckReviews) {
+        return $http.put('/api/trucks/' + id, truckReviews)
+      },
+
+      addLike: function (id, truckLikes) {
+        console.log('in service', truckLikes);
+        return $http.put('/api/trucks/' + id, truckLikes)
+      },
+
+      deleteReviews: function (id) {
+        return $http.delete('/api/trucks/' + id)
       },
 
       getActiveTrucks: function() {

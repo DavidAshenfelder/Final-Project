@@ -9,7 +9,7 @@
           controller: 'TruckController',
         });
         $routeProvider
-          .when('/trucks/:_id', {
+          .when('/trucks/:truckId', {
             templateUrl: 'truck/views/detail.html',
             controller: 'TruckController',
           });

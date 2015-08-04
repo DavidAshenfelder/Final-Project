@@ -1,0 +1,780 @@
+.navbar {
+  border: 0;
+  border-bottom: 2px solid #d4d6d6;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8); }
+
+.navbar-header {
+  float: left;
+  padding-left: 15px; }
+
+.navbar-nav {
+  float: left;
+  margin: 0; }
+
+.navbar-nav > li {
+  float: left; }
+
+.navbar-default {
+  background: #606060;
+  width: 100%;
+  position: fixed;
+  top: 0; }
+
+.navbar-default .navbar-brand {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  background-color: #00DFFC; }
+  .navbar-default .navbar-brand img {
+    background: white;
+    border-radius: 100%;
+    border: 1px solid #d4d6d6;
+    width: 50px;
+    height: 50px; }
+
+.navbar-default .navbar-brand:hover {
+  color: #00DFFC;
+  background-color: #727272; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #d4d6d6; }
+  .navbar-default .navbar-nav > li > a:hover {
+    color: #00DFFC; }
+
+.navbar-brand {
+  margin-left: -15px;
+  -webkit-transition: 0.25s all;
+          transition: 0.25s all; }
+
+.map {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  background-color: #606060;
+  padding: 2%;
+  margin: 1%;
+  border-radius: 2px;
+  opacity: .9; }
+  .map img {
+    width: 100%;
+    height: 100%; }
+
+.mapPageWrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  background: -webkit-radial-gradient(rgba(0, 0, 0, 0.2), black), url("../Images/Truck-Skyline.jpg") no-repeat no-repeat fixed;
+  background: radial-gradient(rgba(0, 0, 0, 0.2), black), url("../Images/Truck-Skyline.jpg") no-repeat no-repeat fixed;
+  background-size: cover; }
+
+.panel-default h2 {
+  width: 100%;
+  text-align: center;
+  color: #00DFFC;
+  border-bottom: 2px solid #d4d6d6; }
+
+.mapInfoWrapper {
+  border-radius: 5px;
+  padding: 2%;
+  margin: 1%;
+  height: 520px;
+  overflow: scroll;
+  opacity: .9;
+  /* box-shadow: 0 3px 7px rgba(0, 0, 0, 0.8); */
+  background-color: #606060; }
+  .mapInfoWrapper .activeTruckWrapper {
+    border-radius: 2px;
+    padding: 2%; }
+    .mapInfoWrapper .activeTruckWrapper img {
+      width: 30px;
+      height: 30px; }
+    .mapInfoWrapper .activeTruckWrapper .truckWrapper {
+      width: 90%; }
+      .mapInfoWrapper .activeTruckWrapper .truckWrapper i {
+        margin: 5px; }
+  .mapInfoWrapper ul {
+    padding: 0;
+    width: 100%; }
+  .mapInfoWrapper ul li {
+    list-style-type: none;
+    text-align: center;
+    color: #606060;
+    padding: 0;
+    margin: 0; }
+    .mapInfoWrapper ul li .activeTruckHeaders {
+      color: #606060; }
+
+.trucksWrapper {
+  height: 200px;
+  width: 100%;
+  margin: 2px;
+  padding: 2px;
+  border: 1px solid #d4d6d6;
+  overflow-wrap: break-word;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center; }
+  .trucksWrapper:hover {
+    border: 1px solid #00DFFC;
+    -webkit-transition: ease .25s;
+            transition: ease .25s; }
+
+.trucksContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+  margin-top: 5%; }
+  .trucksContainer a {
+    overflow-wrap: break-word; }
+
+.trucksRow {
+  background-color: #606060;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 0; }
+  .trucksRow .allTrucksLink {
+    width: 100%;
+    text-align: center;
+    background-color: #d4d6d6; }
+
+.trucksContainer2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+  margin-top: 5%;
+  background: -webkit-radial-gradient(rgba(0, 0, 0, 0.2), black), url("../Images/Food-Truck-Festival.jpg") no-repeat no-repeat fixed;
+  background: radial-gradient(rgba(0, 0, 0, 0.2), black), url("../Images/Food-Truck-Festival.jpg") no-repeat no-repeat fixed;
+  background-size: cover; }
+  .trucksContainer2 a {
+    overflow-wrap: break-word; }
+
+.trucksRow2 {
+  background-color: #606060;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 0;
+  opacity: .8; }
+  .trucksRow2 .allTrucksLink {
+    width: 100%;
+    text-align: center;
+    background-color: #d4d6d6; }
+
+.truck-profile-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.profile-pic-wrapper {
+  width: 30%; }
+
+.form-group {
+  width: 100%; }
+
+.activateButtons {
+  float: right;
+  margin: 2%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .activateButtons button {
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 50%; }
+
+.profile-wrapper {
+  background: -webkit-radial-gradient(rgba(0, 0, 0, 0.2), black), url("../Images/food-truck-inside.jpg") no-repeat no-repeat fixed;
+  background: radial-gradient(rgba(0, 0, 0, 0.2), black), url("../Images/food-truck-inside.jpg") no-repeat no-repeat fixed; }
+
+.profile-container {
+  opacity: .8; }
+
+.profileLegend {
+  margin: 0; }
+
+.truckListWrapper {
+  height: 200px;
+  margin: 2px;
+  border: 3px solid #d4d6d6;
+  overflow-wrap: break-word;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center; }
+  .truckListWrapper:hover {
+    border: 3px solid #00DFFC;
+    -webkit-transition: ease .25s;
+            transition: ease .25s; }
+
+.truckListContainer a {
+  overflow-wrap: break-word; }
+
+.truckListRow {
+  height: auto;
+  overflow: hidden;
+  background-color: #606060;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  background: -webkit-radial-gradient(rgba(0, 0, 0, 0.6), black), url("../Images/Food-Truck-Collage.jpg") fixed;
+  background: radial-gradient(rgba(0, 0, 0, 0.6), black), url("../Images/Food-Truck-Collage.jpg") fixed; }
+
+.truck-detail-wrapper {
+  padding: 2%; }
+
+.truck-info-aside {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  .truck-info-aside .pic-and-header-wrapper {
+    width: 100%;
+    border-bottom: 2px solid #d4d6d6; }
+    .truck-info-aside .pic-and-header-wrapper img {
+      border: 3px solid #00DFFC;
+      width: 100%;
+      margin-top: 2%;
+      margin-bottom: 2%; }
+  .truck-info-aside .truck-info-wrapper {
+    width: 100%;
+    border-bottom: 2px solid #d4d6d6; }
+
+.social-wrapper {
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid #d4d6d6; }
+  .social-wrapper .bird-wrapper {
+    width: 100%;
+    text-align: center; }
+    .social-wrapper .bird-wrapper .fa-twitter {
+      font-size: 5vmax;
+      border-radius: 100%;
+      border: 3px solid #00DFFC;
+      color: #00DFFC;
+      padding: 10px;
+      margin: 10px; }
+
+.logo-wrapper {
+  width: 200px;
+  height: 200px;
+  border: 3px solid #00DFFC;
+  border-radius: 100%;
+  margin: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  padding: 15px;
+  text-align: center; }
+  .logo-wrapper h1 {
+    color: #606060; }
+    .logo-wrapper h1 .fa-heart-o {
+      font-size: 32px;
+      width: 100%; }
+  .logo-wrapper:hover {
+    cursor: pointer; }
+    .logo-wrapper:hover h1 {
+      color: red;
+      -webkit-transition: ease .5s;
+              transition: ease .5s;
+      font-size: 48px; }
+    .logo-wrapper:hover .fa-heart-o {
+      font-size: 48px;
+      color: red;
+      -webkit-transition: ease .5s;
+              transition: ease .5s; }
+
+.truck-logo {
+  width: 200px;
+  height: 200px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  background: url("../Images/truck-logo.png") no-repeat no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 10px; }
+
+.truck-info-aside {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.socialAside {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  .socialAside .twitter-feed {
+    color: #606060; }
+
+.reviews-wrapper {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 2px solid #d4d6d6;
+  width: 100%; }
+  .reviews-wrapper .review-star {
+    font-size: 32px; }
+  .reviews-wrapper .add-review {
+    margin: 5px; }
+  .reviews-wrapper .float-right {
+    float: right;
+    border-radius: 100%;
+    margin: 5px; }
+  .reviews-wrapper .review-form {
+    margin-top: 15px; }
+
+body {
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/shattered.png) fixed;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/shattered.png) fixed;
+  background-color: #727272; }
+
+.headerFiller {
+  height: 50px; }
+
+.angular-google-map-container {
+  height: 400px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #00DFFC; }
+
+a {
+  color: #d4d6d6; }
+  a:hover {
+    color: #00DFFC; }
+
+.text-muted {
+  color: #00DFFC; }
+
+.container-fluid {
+  padding: 0; }
+
+.panel {
+  background-color: #d4d6d6;
+  padding: 0;
+  /* box-shadow: 0 3px 7px rgba(0, 0, 0, .8); */ }
+
+.panel-default {
+  font-size: 85%;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #727272;
+  border: 1px solid #d4d6d6;
+  margin: 1%;
+  border-radius: 5px;
+  /* box-shadow: 0 3px 7px rgba(0, 0, 0, 0.8); */ }
+
+.panel-body {
+  padding: 0; }
+
+.panel-heading {
+  font-size: 85%;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-color: #727272;
+  background-color: #d4d6d6;
+  color: #606060; }
+
+.form-control {
+  border-radius: 0; }
+
+.center-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.center-form {
+  margin: 2.5% auto; }
+
+.signup-or-separator {
+  position: relative;
+  height: 34px;
+  text-align: center;
+  background: none; }
+
+.signup-or-separator hr {
+  width: 90%;
+  margin: -16px auto 10px auto;
+  border-top: 1px solid #dce0e0; }
+
+.signup-or-separator .text {
+  display: inline-block;
+  padding: 8px;
+  margin: 0;
+  background-color: #fff; }
+
+.has-feedback .form-control-feedback {
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  color: #555; }
+
+.password-strength-indicator {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 5px;
+  padding: 0 15px; }
+
+.password-strength-indicator span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin-bottom: 2px;
+  background: #ebeef1;
+  border-radius: 5px; }
+
+[class^='ion-'] {
+  font-size: 1.2em; }
+
+.has-feedback .form-control {
+  padding-left: 42.5px; }
+
+.alert-material {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  z-index: 1;
+  display: inline-block;
+  min-height: 48px;
+  padding: 13px 24px 12px;
+  font-family: 'Roboto', sans-serif;
+  color: #f1f1f1;
+  cursor: default;
+  background: #323232;
+  border-radius: 2px;
+  outline: none;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }
+
+.profile-picture {
+  height: 100px;
+  display: block; }
+
+.btn {
+  font-weight: bold;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  background-color: #00DFFC;
+  border: 1px solid #008C9E; }
+
+.btn-primary {
+  background-color: #00DFFC;
+  color: #727272;
+  border: 1px solid #008C9E; }
+
+.btn-primary:hover {
+  background-color: #3ad9ea; }
+
+.btn-success {
+  background-color: #00DFFC;
+  color: #727272;
+  border: 1px solid #008C9E; }
+
+.btn-success:hover {
+  background-color: #008C9E;
+  -webkit-transition: ease .25s;
+          transition: ease .25s;
+  border: 1px solid #00DFFC; }
+
+.btn-danger {
+  background-color: #db4437; }
+
+.btn-danger:hover {
+  background-color: #b04c3b; }
+
+.btn-group-vertical .btn {
+  margin-bottom: 10px; }
+
+.btn-group-vertical > .btn:first-child:not(:last-child) {
+  border-radius: 2px; }
+
+.btn-group-vertical > .btn:not(:first-child):not(:last-child) {
+  border-radius: 2px; }
+
+.btn-group-vertical > .btn:last-child:not(:first-child) {
+  border-radius: 2px; }
+
+.btn-lg {
+  font-size: 14px; }
+
+.btn [class^='ion-'] {
+  margin-right: 5px; }
+
+.btn .fa {
+  margin-right: 5px; }
+
+/*********************
+* Social Buttons
+*********************/
+.btn-google-plus {
+  color: #fff;
+  background-color: #dd4b39;
+  border: 1px solid #d54331; }
+
+.btn-google-plus:hover,
+.btn-google-plus:focus {
+  color: #fff;
+  background-color: #cb3927; }
+
+.btn-facebook {
+  color: #fff;
+  background-color: #3b5998;
+  border: 1px solid #335190; }
+
+.btn-facebook:hover,
+.btn-facebook:focus {
+  color: #fff;
+  background-color: #294786; }
+
+.btn-linkedin {
+  color: #fff;
+  background-color: #007bb6;
+  border: 1px solid #0073ae; }
+
+.btn-linkedin:hover,
+.btn-linkedin:focus {
+  color: #fff;
+  background-color: #0069a4; }
+
+.btn-twitter {
+  color: #fff;
+  background-color: #00aced;
+  border: 1px solid #009fdb; }
+
+.btn-twitter:hover,
+.btn-twitter:focus {
+  color: #fff;
+  background-color: #0090c7; }
+
+.btn-foursquare {
+  color: #fff;
+  background-color: #f94877;
+  border: 1px solid #f8215a; }
+
+.btn-foursquare:hover,
+.btn-foursquare:focus {
+  color: #fff;
+  background-color: #f71752; }
+
+.btn-github {
+  color: #fff;
+  background-color: #444;
+  border: 1px solid #3b3b3b; }
+
+.btn-github:hover,
+.btn-github:focus {
+  color: #fff;
+  background-color: #303030; }
+
+.btn-yahoo {
+  color: #fff;
+  background-color: #720e9e;
+  border: 1px solid #580b75; }
+
+.btn-yahoo:hover,
+.btn-yahoo:focus {
+  color: #fff;
+  background-color: #303030; }
+
+.btn-live {
+  color: #fff;
+  background-color: #2672ec; }
+
+.btn-live:hover,
+.btn-live:focus {
+  color: #fff;
+  background-color: #125acd; }
+
+/*********************
+* Animations
+*********************/
+.fadeZoom.ng-enter {
+  -webkit-animation-duration: 0.2, 0.2s;
+          animation-duration: 0.2, 0.2s;
+  -webkit-animation-name: fadeIn, zoomIn;
+          animation-name: fadeIn, zoomIn; }
+
+.fadeZoomFadeDown.ng-enter {
+  -webkit-animation-duration: 0.2s, 0.2s;
+          animation-duration: 0.2s, 0.2s;
+  -webkit-animation-name: fadeIn, zoomIn;
+          animation-name: fadeIn, zoomIn; }
+
+.fadeZoomFadeDown.ng-leave {
+  -webkit-animation: fadeOutDown 0.2s;
+          animation: fadeOutDown 0.2s; }
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.8, 0.8, 0.8);
+            transform: scale3d(0.8, 0.8, 0.8); }
+  50% {
+    opacity: 1; } }
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.8, 0.8, 0.8);
+            transform: scale3d(0.8, 0.8, 0.8); }
+  50% {
+    opacity: 1; } }

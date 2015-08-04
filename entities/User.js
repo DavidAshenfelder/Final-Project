@@ -17,6 +17,8 @@ var userSchema = new mongoose.Schema({
   truckName: String,
   truckDescription: String,
   truckWebsite: String,
+  truckReviews: Array,
+  truckLikes: Number,
   phone: String,
   picture: String,
   facebook: String,

@@ -90,10 +90,36 @@ router.route('/me')
      router.route('/trucks/:truckId')
       .get(function (req, res) {
         User.findById(req.params.truckId, function(err, truck) {
-          console.log('truck in router', truck);
+          // console.log('truck in router', truck);
           res.send(truck);
         });
-      });
+      })
+        .put(function (req, res) {
+          User.findById(req.params.truckId, function(err, truck) {
+            console.log('truck in router', truck);
+            console.log('req.body', req.body);
+            if (req.body.rating) {
+              truck.truckReviews.push(req.body);
+            } else {
+              truck.truckLikes = req.body.truckLikes;
+            };
+            truck.save(function(err) {
+              console.log("ERROR IN SAVE", err);
+              res.status(200).end();
+            });
+            console.log("ERROR", err)
+          });
+        })
+
+        .delete(function (req, res) {
+          User.findById(req.params.truckId, function(err, truck) {
+            console.log('truck in router', truck);
+            truck.truckReviews = []
+            truck.save(function() {
+              res.status(200).end();
+            })
+          });
+        });
 
 
 

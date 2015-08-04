@@ -3,9 +3,15 @@
       <div class="map container panel-default col-md-7 col-sm-12 col-xs-12">
           <h2>Truck Map</h2>
           <ui-gmap-google-map center='map.center' zoom='map.zoom' fit=true scrollwheel=false class="col-md-12 col-sm-12 col-xs-12">
-<!--                <ui-gmap-search-box></ui-gmap-search-box>
- --><!--                <ui-gmap-window><ui-gmap-window>
- -->             <ui-gmap-marker coords="truck.truckLocation.coords" icon="''" idkey="truck._id" ng-repeat="truck in activeTrucks"></ui-gmap-marker>
+            <ui-gmap-marker model="marker" ng-repeat="marker in markers" coords="marker.coords" idkey="marker.idKey" options="marker.options">
+              <ui-gmap-window isIconVisibleOnClick="true" coords="marker.coords">
+                <div>
+                  <h6>{{marker.truckName}}</h6>
+                  <h6>{{marker.truckTime}}</h6>
+                  <img src="{{marker.truckImage}}" alt="">
+                </div>
+             </ui-gmap-window>
+            </ui-gmap-marker>
           </ui-gmap-google-map>
       </div>
       <div class="mapInfoWrapper panel-default container col-md-4 col-sm-12 col-xs-12">
@@ -56,7 +62,7 @@
 <!-- <truck-list ng-repeat="truck in trucks" truck="truck"></truck-list>-->
       <div class="panel-default trucksRow row col-md-12 col-sm-12 col-xs-12">
         <h2>Trucks</h2>
-        <a href="/#/trucks" ng-repeat="truck in trucks | limitTo : 10" class="col-md-3 col-sm-5 col-xs-12">
+        <a href="/#/trucks/{{truck._id}}" ng-repeat="truck in trucks | limitTo : 10" class="col-md-3 col-sm-5 col-xs-12">
           <div class="trucksWrapper" data-id="{{truck._id}}"  style='background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{truck.truckImage}}) no-repeat no-repeat center; background-size: cover;'>
             <div class="truckInfo">
               <h1 class="truckTitle">{{truck.truckName}}</h1>
@@ -73,7 +79,7 @@
         <div class="panel-default trucksRow2 row col-md-12 col-sm-12 col-xs-12">
           <h2>Truck Events</h2>
 
-          <a href="/#/trucks" ng-repeat="truck in trucks | limitTo : 10" class="col-md-3 col-sm-5 col-xs-12">
+          <a href="/#/trucks/{{truck._id}}" ng-repeat="truck in trucks | limitTo : 10" class="col-md-3 col-sm-5 col-xs-12">
             <div class="trucksWrapper" data-id="{{truck._id}}"  style='background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{truck.truckImage}}) no-repeat no-repeat center; background-size: cover;'>
               <div class="truckInfo">
                 <h1 class="truckTitle">{{truck.truckName}}</h1>

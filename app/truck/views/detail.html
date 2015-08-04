@@ -1,23 +1,27 @@
-<Section class="truck-detail-wrapper col-md-12" ng-repeat="truck in truckDetails">
+<section class="truck-detail-wrapper col-md-12">
   <aside class="truck-info-aside col-md-8">
     <div class="pic-and-header-wrapper">
-      <h1>{{truck.truckName}}</h1>
+      <h1>{{truckDetails.truckName}}</h1>
       <h3>Categories: BBQ, Comfort Food, Southern Food</h3>
       <button class=" btn-primary truck-book">Book</button>
       <button class=" btn-primary truck-find">Find</button>
-      <img src="{{truck.truckImage}}" alt="http://fillmurray.com/500/400" />
+      <img src="{{truckDetails.truckImage}}"/>
     </div>
     <div class="truck-info-wrapper">
       <div class="truck-info-description">
         <h3>Truck Description:</h3>
-        <p>{{truck.truckDescription}}</p>
+        <p>{{truckDetails.truckDescription}}</p>
       </div>
     </div>
         <h2>Truck Map</h2>
-        <ui-gmap-google-map center='map.center' zoom='map.zoom' fit=true scrollwheel=false class="col-md-12 col-sm-12 col-xs-12">
-<!--                <ui-gmap-search-box></ui-gmap-search-box>
---><!--                <ui-gmap-window><ui-gmap-window>
--->             <ui-gmap-marker coords="truck.truckLocation.coords" icon="''" idkey="truck._id" ng-repeat="truck in truckDetails"></ui-gmap-marker>
+        <ui-gmap-google-map center='map.center' zoom='map.zoom' class="col-md-12 col-sm-12 col-xs-12">
+            <ui-gmap-marker ng-if="truckDetails.active === true" model="marker" ng-repeat="marker in detailMarkers" coords="marker.coords" idkey="marker.idKey" options="marker.options">
+              <ui-gmap-window isIconVisibleOnClick="true" coords="marker.coords" options>
+                <h6>{{marker.truckName}}</h6>
+                <img src="'{{marker.truckImage}}'" alt="">
+                <p>{{marker.truckTime}}</p>
+             </ui-gmap-window>
+            </ui-gmap-marker>
         </ui-gmap-google-map>
   </aside>
   <aside class="socialAside col-md-4 col-sm-12">
@@ -28,35 +32,37 @@
       <h5 class="twitter-feed"><i class="fa fa-twitter"></i> Place the most recent twitter feed here!
       </h5>
     </div>
-    <div class="logo-wrapper">
+    <div class="logo-wrapper" ng-click="addLike(truckDetails._id, truckDetails)">
       <div class="truck-logo">
-        <h1>5
+        <h1>{{truckDetails.truckLikes}}
         <i class="fa fa-heart-o"></i>
         </h1>
       </div>
     </div>
     <div class="reviews-wrapper">
       <h1>Reviews:</h1>
-      <h5 class="reveiw-header"> Best bite on Wheels..</h5>
-      <div class="review-stars">
-    <rating ng-model="rate" max="5" rate="5" readonly="true" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
-    <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
-    </div>
-      <div class="review-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla</p>
+      <div class="reviews" ng-repeat="reviews in truckDetails.truckReviews">
+        <h5 class="reveiw-header">{{reviews.title}}</h5>
+        <div class="review-stars">
+      <rating ng-model="reviews.rating" max="5" rate="5" readonly="true" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
+      <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
       </div>
-      <button class="btn-primary add-review" ng-model="reviewForm" ng-click="showMe()">Add Review</button>
-      <form class="review-form" ng-show="show">
-        <button class="btn-primary float-right" ng-click="hideMe()">X</button>
+        <div class="review-body">
+          <p>{{reviews.body}}</p>
+        </div>
+      </div>
+      <button ng-if="isAuthenticated()" class="btn-primary add-review" ng-click="showMe()">Add Review</button>
+      <button class="btn-primary float-right" ng-show="show" ng-click="hideMe()">X</button>
+      <form class="review-form" ng-model="reviewForm" ng-show="show" ng-submit="addReview(truckDetails._id, reviewForm)" validate>
         <p>Select Stars for Rating:</p>
-        <rating class="form-group review-star" ng-model="rate" max="5" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
+        <rating class="form-group review-star" max="5" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" ng-model="reviewForm.rating" required></rating>
         <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
-        <input class="form-group" type="text" name="Title" placeholder="Title">
-        <textarea class="form-group" name="name" rows="8" cols="40" placeholder="Tell this truck how great they are..."></textarea>
-        <button class="btn-primary">Submit Review</button>
+        <input class="form-group" type="text" name="Title" placeholder="Title" ng-model="reviewForm.title" required>
+        <textarea class="form-group" name="name" rows="8" cols="40" placeholder="Tell this truck how great they are..." ng-model="reviewForm.body" required></textarea>
+        <button ng-click="reviewForm.$valid && addreview(truckDetails._id, reviewForm)" class="btn-primary">Submit Review</button>
       </form>
-
+      <button ng-click="deleteReviews(truckDetails._id)" class="btn-primary">Delete Reviews</button>
 
     </div>
   </aside>
-</Section>
+</section>
