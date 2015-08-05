@@ -537,7 +537,7 @@ a {
   /* box-shadow: 0 3px 7px rgba(0, 0, 0, 0.8); */ }
 
 .panel-body {
-  padding: 0; }
+  color: #d4d6d6; }
 
 .panel-heading {
   font-size: 85%;
