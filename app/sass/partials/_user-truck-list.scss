@@ -6,6 +6,11 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  p {
+    color: $lightText;
+
+  }
+
   &:hover {
     border: 3px solid $aqua;
     transition: ease .25s;
