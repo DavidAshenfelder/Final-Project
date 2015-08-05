@@ -48,6 +48,9 @@ a {
   padding: 0;
 }
 
+.row {
+  margin: 0;
+}
 
 .panel {
   background-color: $lightText;
@@ -61,7 +64,7 @@ a {
   text-transform: uppercase;
   color: $text;
   border: 1px solid $lightText;
-  margin: 1%;
+  margin: 2%;
   border-radius: 5px;
   /* box-shadow: 0 3px 7px rgba(0, 0, 0, 0.8); */
 }

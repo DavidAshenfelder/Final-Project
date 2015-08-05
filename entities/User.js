@@ -16,6 +16,7 @@ var userSchema = new mongoose.Schema({
   truckImage: String,
   truckName: String,
   truckDescription: String,
+  truckCategories: String,
   truckWebsite: String,
   truckReviews: Array,
   truckLikes: Number,

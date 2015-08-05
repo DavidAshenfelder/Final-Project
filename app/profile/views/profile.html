@@ -52,6 +52,10 @@
             <input type="text" class="form-control" ng-model="user.truckDescription" />
           </div>
           <div class="form-group">
+            <label class="control-label"><i class="ion-person"></i> Truck Categories</label>
+            <input type="text" class="form-control" ng-model="user.truckCategories" />
+          </div>
+          <div class="form-group">
             <label class="control-label"> Website</label>
             <input type="text" class="form-control" ng-model="user.truckWebsite" />
           </div>
@@ -68,9 +72,11 @@
       <div class="panel-body">
         <legend><i class="ion-clipboard"></i> Edit My Profile</legend>
         <form method="post" ng-submit="updateProfile()">
-          <div class="form-group">
-            <label class="control-label">Profile Picture</label>
+          <div class="form-group profile-pic-wrapper">
+            <label class="control-label">Truck Picture</label>
             <img class="profile-picture" ng-src="{{user.picture || 'http://placehold.it/100x100'}}">
+            <label class="control-label"> Image Url</label>
+            <input type="text" class="form-control" ng-model="user.picture" />
           </div>
           <div class="form-group">
             <label class="control-label"><i class="ion-person"></i> Name</label>

@@ -35,6 +35,7 @@
               truckName: truck.truckName,
               truckImage: truck.truckImage,
               truckTime: truck.truckTime,
+              truckId: truck._id
             };
             $scope.markers.push(marker);
           })

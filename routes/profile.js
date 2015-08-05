@@ -43,6 +43,7 @@ router.route('/me')
       user.truckImage = req.body.truckImage || user.truckImage;
       user.truckName = req.body.truckName || user.truckName;
       user.truckDescription = req.body.truckDescription || user.truckDescription;
+      user.truckCategories = req.body.truckCategories || user.truckCategories;
       user.truckWebsite = req.body.truckWebsite || user.truckWebsite;
       user.phone = req.body.phone || user.phone;
       user.active =  req.body.active

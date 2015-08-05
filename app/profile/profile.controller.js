@@ -37,6 +37,7 @@ angular.module('profile')
         truckWebsite: $scope.user.truckWebsite,
         truckName: $scope.user.truckName,
         truckDescription: $scope.user.truckDescription,
+        truckCategories: $scope.user.truckCategories,
         truckImage: $scope.user.truckImage,
         truckTime: $scope.user.truckTime,
         truckLocation: {address: $scope.user.truckLocation.address, coords: {latitude: '', longitude: ''}},

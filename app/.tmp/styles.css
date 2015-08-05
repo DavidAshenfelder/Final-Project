@@ -18,7 +18,8 @@
   background: #606060;
   width: 100%;
   position: fixed;
-  top: 0; }
+  top: 0;
+  padding: 0; }
 
 .navbar-default .navbar-brand {
   display: -webkit-box;
@@ -72,10 +73,25 @@
   padding: 2%;
   margin: 1%;
   border-radius: 2px;
-  opacity: .9; }
+  opacity: .9;
+  height: 624px; }
   .map img {
-    width: 100%;
-    height: 100%; }
+    width: 200px;
+    height: 150px; }
+
+.windowDetails {
+  width: 220px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .mapPageWrapper {
   display: -webkit-box;
@@ -91,14 +107,16 @@
           flex-wrap: wrap;
   background: -webkit-radial-gradient(rgba(0, 0, 0, 0.2), black), url("../Images/Truck-Skyline.jpg") no-repeat no-repeat fixed;
   background: radial-gradient(rgba(0, 0, 0, 0.2), black), url("../Images/Truck-Skyline.jpg") no-repeat no-repeat fixed;
-  background-size: cover;
-  height: 650px; }
+  background-size: cover; }
 
 .panel-default h2 {
   width: 100%;
   text-align: center;
   color: #00DFFC;
   border-bottom: 2px solid #d4d6d6; }
+
+.panel-body {
+  background-color: #727272; }
 
 .mapInfoWrapper {
   border-radius: 5px;
@@ -126,16 +144,17 @@
   .mapInfoWrapper ul li {
     list-style-type: none;
     text-align: center;
-    color: #606060;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    color: #d4d6d6; }
     .mapInfoWrapper ul li .activeTruckHeaders {
-      color: #606060; }
+      color: #d4d6d6; }
 
 .trucksWrapper {
   height: 200px;
   width: 100%;
   margin: 2px;
+  margin-bottom: 20px;
   padding: 2px;
   border: 1px solid #d4d6d6;
   overflow-wrap: break-word;
@@ -207,8 +226,7 @@
   margin-top: 5%;
   background: -webkit-radial-gradient(rgba(0, 0, 0, 0.2), black), url("../Images/Food-Truck-Festival.jpg") no-repeat no-repeat fixed;
   background: radial-gradient(rgba(0, 0, 0, 0.2), black), url("../Images/Food-Truck-Festival.jpg") no-repeat no-repeat fixed;
-  background-size: cover;
-  height: 650px; }
+  background-size: cover; }
   .trucksContainer2 a {
     overflow-wrap: break-word; }
 
@@ -500,6 +518,9 @@ a {
 .container-fluid {
   padding: 0; }
 
+.row {
+  margin: 0; }
+
 .panel {
   background-color: #d4d6d6;
   padding: 0;
@@ -511,7 +532,7 @@ a {
   text-transform: uppercase;
   color: #727272;
   border: 1px solid #d4d6d6;
-  margin: 1%;
+  margin: 2%;
   border-radius: 5px;
   /* box-shadow: 0 3px 7px rgba(0, 0, 0, 0.8); */ }
 

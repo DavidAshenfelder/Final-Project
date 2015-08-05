@@ -9,11 +9,18 @@
   margin: 1%;
   border-radius: 2px;
   opacity: .9;
-
+  height: 624px;
   img {
-    width: 100%;
-    height: 100%;
+    width: 200px;
+    height: 150px;
   }
+}
+
+.windowDetails {
+  width: 220px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .mapPageWrapper {
@@ -22,7 +29,6 @@
   flex-wrap: wrap;
   background: radial-gradient( rgba(0, 0, 0, .2), rgba(0, 0, 0, 1)), url('../Images/Truck-Skyline.jpg') no-repeat no-repeat fixed;
   background-size: cover;
-  height: 650px;
 }
 
 .panel-default h2 {
@@ -30,6 +36,10 @@
   text-align: center;
   color: $aqua;
   border-bottom: 2px solid $lightText;
+}
+
+.panel-body {
+  background-color: $text;
 }
 
 
@@ -65,11 +75,11 @@
   ul li {
     list-style-type: none;
     text-align: center;
-    color: $grey;
     padding: 0;
     margin: 0;
+    color: $lightText;
     .activeTruckHeaders {
-      color: $grey;
+      color: $lightText;
     }
   }
 }
@@ -78,6 +88,7 @@
   height: 200px;
   width: 100%;
   margin: 2px;
+  margin-bottom: 20px;
   padding: 2px;
   border: 1px solid $lightText;
   overflow-wrap: break-word;
@@ -123,7 +134,6 @@
   margin-top: 5%;
   background: radial-gradient( rgba(0, 0, 0, .2), rgba(0, 0, 0, 1)), url('../Images/Food-Truck-Festival.jpg') no-repeat no-repeat fixed;
   background-size: cover;
-  height: 650px;
   a {
     overflow-wrap: break-word;
   }

@@ -36,11 +36,11 @@ angular.module('auth', ['ngMessages', 'ngRoute', 'mgcrea.ngStrap', 'satellizer']
 
 
     $authProvider.facebook({
-      clientId: '657854390977827'
+      clientId: '1602717146669993'
     });
 
     $authProvider.google({
-      clientId: '964127310171-85u588t2pfc8kc1768v67v9n4ekhbanm.apps.googleusercontent.com'
+      clientId: '75211255281-6rj95mrnmiurj100qe7etqk17p19j5d5.apps.googleusercontent.com'
     });
 
     $authProvider.github({
