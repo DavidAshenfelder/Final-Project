@@ -32,6 +32,10 @@
               options: {
                 icon:'Images/truck-pin.png',
               },
+              truckName: truckDetails.truckName,
+              truckImage: truckDetails.truckImage,
+              truckTime: truckDetails.truckTime,
+              truckId: truckDetails._id
             };
             $scope.detailMarkers.push(marker);
           });

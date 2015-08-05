@@ -17,9 +17,11 @@
         <ui-gmap-google-map center='map.center' zoom='map.zoom' class="col-md-12 col-sm-12 col-xs-12">
             <ui-gmap-marker ng-if="truckDetails.active === true" model="marker" ng-repeat="marker in detailMarkers" coords="marker.coords" idkey="marker.idKey" options="marker.options">
               <ui-gmap-window isIconVisibleOnClick="true" coords="marker.coords" options>
-                <h6>{{marker.truckName}}</h6>
-                <img src="'{{marker.truckImage}}'" alt="">
-                <p>{{marker.truckTime}}</p>
+                <div class="windowDetails">
+                  <h6>{{marker.truckName}} | Time:{{marker.truckTime}}</h6>
+                  <img src="{{marker.truckImage}}" alt="">
+                  <a href="#/trucks/{{marker.truckId}}"> <h4>Truck Details</h4></a>
+                </div>
              </ui-gmap-window>
             </ui-gmap-marker>
         </ui-gmap-google-map>
