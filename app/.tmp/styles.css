@@ -319,6 +319,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center; }
+  .truckListWrapper:hover {
+    cursor: pointer; }
   .truckListWrapper p {
     color: #d4d6d6; }
   .truckListWrapper:hover {

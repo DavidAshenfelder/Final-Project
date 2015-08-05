@@ -6,6 +6,9 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
   p {
     color: $lightText;
 
