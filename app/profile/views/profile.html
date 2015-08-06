@@ -10,15 +10,15 @@
             <button class="btn btn-lg btn-success" value=false ng-click="updateProfile(user.active = false)">Deactivate</button>
           </div>
           <div class="form-group">
-            <label class="control-label"> Active</label>
+            <label class="control-label"><i class="fa fa-check"></i> Active</label>
             <input type="text" class="form-control" ng-model="user.active">
           </div>
           <div class="form-group">
-            <label class="control-label"> Location</label>
+            <label class="control-label"><i class="fa fa-map-marker"></i> Location</label>
             <input type="text" class="form-control" ng-model="user.truckLocation.address" />
           </div>
           <div class="form-group">
-            <label class="control-label"></i> Time</label>
+            <label class="control-label"><i class="fa fa-clock-o"></i> Time</label>
             <input type="text" class="form-control" ng-model="user.truckTime" />
           </div>
           <div class="form-group">
@@ -37,23 +37,23 @@
           <div class="form-group profile-pic-wrapper">
             <label class="control-label">Truck Picture</label>
             <img class="profile-picture" ng-src="{{user.truckImage || 'http://placehold.it/100x100'}}">
-            <label class="control-label"> Image Url</label>
+            <label class="control-label"><i class="fa fa-picture-o"></i> Image Url</label>
             <input type="text" class="form-control" ng-model="user.truckImage" />
           </div>
           <div class="form-group">
-            <label class="control-label"><i class="ion-person"></i> Truck Name</label>
+            <label class="control-label"><i class="fa fa-truck"></i> Truck Name</label>
             <input type="text" class="form-control" ng-model="user.truckName" />
           </div>
           <div class="form-group">
-            <label class="control-label"><i class="ion-person"></i> Truck Description</label>
+            <label class="control-label"><i class="fa fa-align-justify"></i> Truck Description</label>
             <input type="text" class="form-control" ng-model="user.truckDescription" />
           </div>
           <div class="form-group">
-            <label class="control-label"><i class="ion-person"></i> Truck Categories</label>
+            <label class="control-label"><i class="fa fa-align-justify"></i> Truck Categories</label>
             <input type="text" class="form-control" ng-model="user.truckCategories" />
           </div>
           <div class="form-group">
-            <label class="control-label"> Website</label>
+            <label class="control-label"><i class="fa fa-laptop"></i> Website</label>
             <input type="text" class="form-control" ng-model="user.truckWebsite" />
           </div>
           <div class="form-group">
@@ -72,7 +72,7 @@
           <div class="form-group profile-pic-wrapper">
             <label class="control-label">Truck Picture</label>
             <img class="profile-picture" ng-src="{{user.picture || 'http://placehold.it/100x100'}}">
-            <label class="control-label"> Image Url</label>
+            <label class="control-label"><i class="fa fa-picture-o"></i> Image Url</label>
             <input type="text" class="form-control" ng-model="user.picture" />
           </div>
           <div class="form-group">
@@ -80,7 +80,7 @@
             <input type="text" class="form-control" ng-model="user.displayName" />
           </div>
           <div class="form-group">
-            <label class="control-label">Username</label>
+            <label class="control-label"><i class="fa fa-users"></i> Username</label>
             <input type="text" class="form-control" ng-model="user.username" />
           </div>
           <div class="form-group">
@@ -88,7 +88,7 @@
             <input type="email" class="form-control" ng-model="user.email" />
           </div>
           <div class="form-group">
-            <label class="control-label"> Phone</label>
+            <label class="control-label"><i class="fa fa-phone"></i> Phone</label>
             <input type="text" class="form-control" ng-model="user.phone" />
           </div>
           <button class="btn btn-lg btn-success">Update Information</button>

@@ -1,7 +1,7 @@
 .navbar {
   border: 0;
-  /* border-bottom: 2px solid $lightText; */
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8); }
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8);
+  margin-bottom: 0; }
 
 .navbar-header {
   float: left;
@@ -551,10 +551,19 @@
     background-color: red;
     color: white; }
 
-.or {
+.full-width {
+  width: 100%; }
+  .full-width .panel {
+    opacity: .9; }
+
+.signup-or-separator {
   font-size: 24px;
+  font-style: italic;
+  padding-bottom: 8px;
+  position: relative;
   height: 43px;
-  padding-bottom: 8px; }
+  text-align: center;
+  background: none; }
 
 .logo-container {
   display: -webkit-box;
@@ -600,12 +609,14 @@
     .signup-button-wrapper button:hover {
       border-color: white; }
 
+.vendorWrapper, .clientFormWrapper {
+  width: 80%; }
+
 .truckSignUp, .clientSignUp {
   font-size: 32px;
   color: #d4d6d6; }
 
 .signup-form-wrapper {
-  width: 100%;
   margin-top: 20px;
   opacity: .85; }
 
@@ -684,12 +695,6 @@ a {
 
 .center-form {
   margin: 2.5% auto; }
-
-.signup-or-separator {
-  position: relative;
-  height: 43px;
-  text-align: center;
-  background: none; }
 
 .signup-or-separator hr {
   width: 90%;
