@@ -6,6 +6,9 @@
 
       $scope.markers = [];
 
+      $scope.controllerName  = 'HomeController';
+
+
       $scope.map = {
         center: {
           latitude: 32.7833,
@@ -20,7 +23,6 @@
         HomeService.active().then(function(trucks) {
           $scope.activeTrucks = trucks.data
           var activeTrucks = trucks.data
-          console.log('trucks.data', trucks.data);
           activeTrucks.forEach(function(el) {
             var truck = el;
             var marker = {
@@ -35,11 +37,11 @@
               truckName: truck.truckName,
               truckImage: truck.truckImage,
               truckTime: truck.truckTime,
-              truckId: truck._id
+              truckId: truck._id,
+              truckLocation: truck.truckLocation.address
             };
             $scope.markers.push(marker);
           })
-          console.log('MARKERTS', $scope.markers);
         });
         HomeService.inactive().then(function(trucks) {
           $scope.inactiveTrucks = trucks.data

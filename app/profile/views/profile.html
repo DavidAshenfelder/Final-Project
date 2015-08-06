@@ -6,9 +6,6 @@
         <legend class="profileLegend"><i class="ion-clipboard"></i> Edit Truck Location</legend>
         <form method="post" ng-submit="updateProfile()">
           <div class="activateButtons">
-      <a class="twitter-share-button"
-        href="https://twitter.com/intent/tweet">
-      Tweet</a>
             <button class="btn btn-lg btn-success" value=true ng-click="updateProfile(user.active = true)">Activate</button>
             <button class="btn btn-lg btn-success" value=false ng-click="updateProfile(user.active = false)">Deactivate</button>
           </div>
@@ -106,21 +103,21 @@
       <div class="panel-body">
         <legend><i class="ion-link"></i> Linked Accounts</legend>
         <div class="btn-group-vertical">
-          <button class="btn btn-sm btn-danger" ng-if="user.facebook" ng-click="unlink('facebook')">
+          <!-- <button class="btn btn-sm btn-danger" ng-if="user.facebook" ng-click="unlink('facebook')">
             <i class="ion-social-facebook"></i> Unlink Facebook Account
           </button>
           <button class="btn btn-sm btn-primary" ng-if="!user.facebook" ng-click="link('facebook')">
             <i class="ion-social-facebook"></i> Link Facebook Account
           </button>
-          <button class="btn btn-lg btn-success" ng-click="deleteProfile(user.id)">Delete Account</button>
+          <button class="btn btn-lg btn-success" ng-click="deleteProfile(user.id)">Delete Account</button> -->
 
-          <!-- <button class="btn btn-sm btn-danger" ng-if="user.google" ng-click="unlink('google')">
+          <button class="btn btn-sm btn-danger" ng-if="user.google" ng-click="unlink('google')">
             <i class="ion-social-googleplus"></i> Unlink Google Account
           </button>
           <button class="btn btn-sm btn-primary" ng-if="!user.google" ng-click="link('google')">
             <i class="ion-social-googleplus"></i> Link Google Account
           </button>
-          <button class="btn btn-sm btn-danger" ng-if="user.twitter" ng-click="unlink('twitter')">
+          <!-- <button class="btn btn-sm btn-danger" ng-if="user.twitter" ng-click="unlink('twitter')">
             <i class="ion-social-twitter"></i> Unlink Twitter Account
           </button>
           <button class="btn btn-sm btn-primary" ng-if="!user.twitter" ng-click="link('twitter')">

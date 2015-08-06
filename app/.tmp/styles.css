@@ -16,9 +16,6 @@
 
 .navbar-default {
   background: #606060;
-  width: 100%;
-  position: fixed;
-  top: 0;
   padding: 0; }
 
 .navbar-default .navbar-brand {
@@ -93,6 +90,10 @@
       -ms-flex-pack: center;
           justify-content: center; }
 
+.windowDetailsHeader {
+  margin: 0;
+  width: 200px; }
+
 .mapPageWrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -113,7 +114,7 @@
   width: 100%;
   text-align: center;
   color: #00DFFC;
-  border-bottom: 2px solid #d4d6d6; }
+  /* border-bottom: 2px solid $lightText; */ }
 
 .panel-body {
   background-color: #727272; }
@@ -212,6 +213,8 @@
     width: 100%;
     text-align: center;
     background-color: #d4d6d6; }
+    .trucksRow .allTrucksLink h4 {
+      text-shadow: 1px 2px 1px #606060; }
 
 .trucksContainer2 {
   display: -webkit-box;
@@ -252,6 +255,8 @@
     width: 100%;
     text-align: center;
     background-color: #d4d6d6; }
+    .trucksRow2 .allTrucksLink h4 {
+      text-shadow: 1px 2px 1px #606060; }
 
 .truck-profile-form {
   display: -webkit-box;
@@ -296,8 +301,9 @@
     width: 50%; }
 
 .profile-wrapper {
-  background: -webkit-radial-gradient(rgba(0, 0, 0, 0.2), black), url("../Images/food-truck-inside.jpg") no-repeat no-repeat fixed;
-  background: radial-gradient(rgba(0, 0, 0, 0.2), black), url("../Images/food-truck-inside.jpg") no-repeat no-repeat fixed; }
+  background: -webkit-radial-gradient(rgba(0, 0, 0, 0.4), black), url("../Images/food-truck-blueprints.jpg") no-repeat no-repeat fixed;
+  background: radial-gradient(rgba(0, 0, 0, 0.4), black), url("../Images/food-truck-blueprints.jpg") no-repeat no-repeat fixed;
+  background-size: cover; }
 
 .profile-container {
   opacity: .8; }
@@ -328,10 +334,18 @@
     -webkit-transition: ease .25s;
             transition: ease .25s; }
 
-.truckListContainer a {
-  overflow-wrap: break-word; }
+.truckListContainer {
+  padding: 0; }
+  .truckListContainer .search-filter {
+    width: 80%;
+    font-size: 24px;
+    margin: 1%;
+    text-align: center; }
+  .truckListContainer a {
+    overflow-wrap: break-word; }
 
 .truckListRow {
+  padding: 1%;
   height: auto;
   overflow: hidden;
   background-color: #606060;
@@ -350,11 +364,16 @@
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  background: -webkit-radial-gradient(rgba(0, 0, 0, 0.6), black), url("../Images/Food-Truck-Collage.jpg") fixed;
-  background: radial-gradient(rgba(0, 0, 0, 0.6), black), url("../Images/Food-Truck-Collage.jpg") fixed; }
+  min-height: 650px;
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../Images/Food-Truck-Collage.jpg") fixed;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../Images/Food-Truck-Collage.jpg") fixed; }
 
 .truck-detail-wrapper {
   padding: 2%; }
+
+.windowDetails img {
+  width: 200px;
+  height: 150px; }
 
 .truck-info-aside {
   display: -webkit-box;
@@ -495,6 +514,105 @@
   .reviews-wrapper .review-form {
     margin-top: 15px; }
 
+.signup-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  min-height: 700px; }
+  .signup-container video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); }
+  .signup-container .btn-primary[disabled] {
+    background-color: red;
+    color: white; }
+
+.or {
+  font-size: 24px;
+  height: 43px;
+  padding-bottom: 8px; }
+
+.logo-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%; }
+  .logo-container img {
+    width: 200px;
+    height: 200px; }
+
+.text-grey {
+  color: #606060; }
+
+.signup-body {
+  min-height: 400px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #727272; }
+
+.signup-button-wrapper {
+  text-align: center; }
+  .signup-button-wrapper button {
+    width: 275px;
+    border: 5px solid #727272; }
+    .signup-button-wrapper button:hover {
+      border-color: white; }
+
+.truckSignUp, .clientSignUp {
+  font-size: 32px;
+  color: #d4d6d6; }
+
+.signup-form-wrapper {
+  width: 100%;
+  margin-top: 20px;
+  opacity: .85; }
+
+.x-button {
+  float: right;
+  background-color: red; }
+
 body {
   background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/shattered.png) fixed;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/shattered.png) fixed;
@@ -569,7 +687,7 @@ a {
 
 .signup-or-separator {
   position: relative;
-  height: 34px;
+  height: 43px;
   text-align: center;
   background: none; }
 

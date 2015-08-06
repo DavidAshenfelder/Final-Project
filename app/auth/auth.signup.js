@@ -1,5 +1,22 @@
 angular.module('auth')
   .controller('SignupCtrl', function($scope, $alert, $auth) {
+
+    $scope.showVendor = function() {
+       $scope.foodVendor = true;
+    };
+
+    $scope.hideVendor = function() {
+       $scope.foodVendor = false;
+    };
+
+    $scope.showClient = function() {
+       $scope.hungryPerson = true;
+    };
+
+    $scope.hideClient = function() {
+       $scope.hungryPerson = false;
+    };
+
     $scope.signup = function() {
       $auth.signup({
         displayName: $scope.displayName,

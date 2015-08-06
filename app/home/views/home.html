@@ -6,8 +6,9 @@
             <ui-gmap-marker model="marker" ng-repeat="marker in markers" coords="marker.coords" idkey="marker.idKey" options="marker.options">
               <ui-gmap-window isIconVisibleOnClick="true" coords="marker.coords">
                 <div class="windowDetails">
-                  <h6>{{marker.truckName}} | Time:{{marker.truckTime}}</h6>
-                  <img src="{{marker.truckImage}}" alt="">
+                  <h6 class="windowDetailsHeader">{{marker.truckName}} | Time:{{marker.truckTime}}</h6>
+                  <h6 class="windowDetailsHeader">{{marker.truckLocation}}</h6>
+                  <img ng-src="{{marker.truckImage}}" alt="">
                   <a href="#/trucks/{{marker.truckId}}"> <h4>Truck Details</h4></a>
                 </div>
              </ui-gmap-window>
@@ -23,7 +24,7 @@
             <accordion class="truckWrapper" ng-repeat="truck in activeTrucks">
               <accordion-group is-open="status.open">
                 <accordion-heading>
-                  <img src="{{truck.truckImage}}"/>
+                  <img ng-src="{{truck.truckImage}}"/>
                     {{truck.truckName}}<i class=" truckTitle pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
                 </accordion-heading>
                 <ul>
@@ -45,7 +46,7 @@
             <accordion class="truckWrapper" ng-repeat="truck in inactiveTrucks">
               <accordion-group is-open="status.open">
                 <accordion-heading>
-                  <img src="{{truck.truckImage}}"/>
+                  <img ng-src="{{truck.truckImage}}"/>
                     {{truck.truckName}}<i class=" truckTitle pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
                 </accordion-heading>
                 <ul>
@@ -66,7 +67,7 @@
         <a href="/#/trucks/{{truck._id}}" ng-repeat="truck in trucks | limitTo : 10" class="col-md-3 col-sm-5 col-xs-12">
           <div class="trucksWrapper" data-id="{{truck._id}}"  style='background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{truck.truckImage}}) no-repeat no-repeat center; background-size: cover;'>
             <div class="truckInfo">
-              <h1 class="truckTitle">{{truck.truckName}}</h1>
+              <h2 class="truckTitle">{{truck.truckName}}</h2>
             </div>
           </div>
         </a>
@@ -82,7 +83,7 @@
           <a href="/#/trucks/{{truck._id}}" class="col-md-3 col-sm-5 col-xs-12">
             <div class="trucksWrapper"  style='background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{truck.truckImage}}) no-repeat no-repeat center; background-size: cover;'>
               <div class="truckInfo">
-                <h1 class="truckTitle">River Dogs Bash</h1>
+                <h2 class="truckTitle">River Dogs Bash</h2>
                 <h6>Sept. 4th</h6>
                 <h6>6pm</h6>
               </div>
@@ -91,7 +92,7 @@
           <a href="/#/trucks/{{truck._id}}" class="col-md-3 col-sm-5 col-xs-12">
             <div class="trucksWrapper"  style='background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{truck.truckImage}}) no-repeat no-repeat center; background-size: cover;'>
               <div class="truckInfo">
-                <h1 class="truckTitle">Party At the Point</h1>
+                <h2 class="truckTitle">Party At the Point</h2>
                 <h6>Sept. 15th</h6>
                 <h6>6pm</h6>
               </div>
@@ -100,7 +101,7 @@
           <a href="/#/trucks/{{truck._id}}" class="col-md-3 col-sm-5 col-xs-12">
             <div class="trucksWrapper"  style='background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{truck.truckImage}}) no-repeat no-repeat center; background-size: cover;'>
               <div class="truckInfo">
-                <h1 class="truckTitle">Battery Soccer Game</h1>
+                <h2 class="truckTitle">Battery Soccer Game</h2>
                 <h6>Sept. 4th</h6>
                 <h6>6pm</h6>
               </div>
@@ -109,7 +110,7 @@
           <a href="/#/trucks/{{truck._id}}" class="col-md-3 col-sm-5 col-xs-12">
             <div class="trucksWrapper"  style='background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{truck.truckImage}}) no-repeat no-repeat center; background-size: cover;'>
               <div class="truckInfo">
-                <h1 class="truckTitle">BenefitFocus Luncheon</h1>
+                <h2 class="truckTitle">BenefitFocus Luncheon</h2>
                 <h6>Sept. 8th</h6>
                 <h6>12pm</h6>
               </div>
@@ -118,7 +119,7 @@
           <a href="/#/trucks/{{truck._id}}" class="col-md-3 col-sm-5 col-xs-12">
             <div class="trucksWrapper"  style='background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{truck.truckImage}}) no-repeat no-repeat center; background-size: cover;'>
               <div class="truckInfo">
-                <h1 class="truckTitle">Blackbaud Luncheon</h1>
+                <h2 class="truckTitle">Blackbaud Luncheon</h2>
                 <h6>Sept. 4th</h6>
                 <h6>12pm</h6>
               </div>
@@ -127,7 +128,7 @@
           <a href="/#/trucks/{{truck._id}}" class="col-md-3 col-sm-5 col-xs-12">
             <div class="trucksWrapper"  style='background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{truck.truckImage}}) no-repeat no-repeat center; background-size: cover;'>
               <div class="truckInfo">
-                <h1 class="truckTitle">Chucktown Truck Down</h1>
+                <h2 class="truckTitle">Chucktown Truck Down</h2>
                 <h6>Sept. 14th</h6>
                 <h6>6pm</h6>
               </div>
@@ -136,7 +137,7 @@
           <a href="/#/trucks/{{truck._id}}" class="col-md-3 col-sm-5 col-xs-12">
             <div class="trucksWrapper"  style='background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{truck.truckImage}}) no-repeat no-repeat center; background-size: cover;'>
               <div class="truckInfo">
-                <h1 class="truckTitle">Truck Stop</h1>
+                <h2 class="truckTitle">Truck Stop</h2>
                 <h6>Sept. 4th</h6>
                 <h6>6pm</h6>
               </div>
@@ -145,7 +146,7 @@
           <a href="/#/trucks/{{truck._id}}" class="col-md-3 col-sm-5 col-xs-12">
             <div class="trucksWrapper"  style='background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{truck.truckImage}}) no-repeat no-repeat center; background-size: cover;'>
               <div class="truckInfo">
-                <h1 class="truckTitle">TruckRally</h1>
+                <h2 class="truckTitle">TruckRally</h2>
                 <h6>Sept. 16th</h6>
                 <h6>6pm</h6>
               </div>

@@ -1,0 +1,84 @@
+.signup-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  min-height: 700px;
+  video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    }
+  .btn-primary[disabled] {
+    background-color: red;
+    color: white;
+  }
+}
+
+.or {
+  font-size: 24px;
+  padding-bottom: 8px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.text-grey {
+  color:$grey;
+}
+
+.signup-body {
+  min-height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: $text;
+}
+
+.signup-button-wrapper {
+  text-align: center;
+  button {
+    width: 275px;
+    border: 5px solid $text;
+    &:hover {
+      border-color: white;
+    }
+  }
+
+}
+
+.truckSignUp, .clientSignUp {
+  font-size: 32px;
+  color: $lightText;
+}
+
+.signup-form-wrapper {
+  width: 100%;
+  margin-top: 20px;
+  opacity: .85;
+}
+
+.x-button {
+  float: right;
+  background-color: red;
+}

@@ -1,6 +1,7 @@
 <section class="container truckListContainer col-md-12">
   <div class="row truckListRow">
-        <div class="truckListWrapper col-md-5" data-id="{{truck._id}}" ng-repeat="truck in trucks" ng-click="getTruck(truck._id)" style='background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{truck.truckImage}}) no-repeat no-repeat center; background-size: cover;'>
+    <input class="search-filter" placeholder="what's your stomach telling you?..." type="text" ng-model="search">
+        <div class="truckListWrapper col-md-5" data-id="{{truck._id}}" ng-repeat="truck in trucks | filter:search" ng-click="getTruck(truck._id)" style='background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url({{truck.truckImage}}) no-repeat no-repeat center; background-size: cover;'>
           <aside class="truckInfo">
             <h1 class="truckTitle">{{truck.truckName}}</h1>
             <p class="description">{{truck.truckDescription}}</p>

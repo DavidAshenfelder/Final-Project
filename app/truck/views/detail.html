@@ -3,9 +3,7 @@
     <div class="pic-and-header-wrapper">
       <h1>{{truckDetails.truckName}}</h1>
       <h3>Categories: {{truckDetails.truckCategories}}</h3>
-      <button class=" btn-primary truck-book">Book</button>
-      <button class=" btn-primary truck-find">Find</button>
-      <img src="{{truckDetails.truckImage}}"/>
+      <img ng-src="{{truckDetails.truckImage}}"/>
     </div>
     <div class="truck-info-wrapper">
       <div class="truck-info-description">
@@ -18,9 +16,10 @@
             <ui-gmap-marker ng-if="truckDetails.active === true" model="marker" ng-repeat="marker in detailMarkers" coords="marker.coords" idkey="marker.idKey" options="marker.options">
               <ui-gmap-window isIconVisibleOnClick="true" coords="marker.coords" options>
                 <div class="windowDetails">
-                  <h6>{{marker.truckName}} | Time:{{marker.truckTime}}</h6>
-                  <img src="{{marker.truckImage}}" alt="">
-                  <a href="#/trucks/{{marker.truckId}}"> <h4>Truck Details</h4></a>
+                  <h6 class="windowDetailsHeader">{{marker.truckName}} | Time: {{marker.truckTime}}</h6>
+                  <h6 class="windowDetailsHeader">{{marker.truckLocation}}</h6>
+                  <img ng-src="{{marker.truckImage}}" alt="">
+                  <a href="#/trucks/{{marker.truckId}}"><h4>Truck Details</h4></a>
                 </div>
              </ui-gmap-window>
             </ui-gmap-marker>
@@ -63,8 +62,8 @@
         <textarea class="form-group" name="name" rows="8" cols="40" placeholder="Tell this truck how great they are..." ng-model="reviewForm.body" required></textarea>
         <button ng-click="reviewForm.$valid && addreview(truckDetails._id, reviewForm)" class="btn-primary">Submit Review</button>
       </form>
-      <button ng-click="deleteReviews(truckDetails._id)" class="btn-primary">Delete Reviews</button>
-
+<!--       <button ng-click="deleteReviews(truckDetails._id)" class="btn-primary">Delete Reviews</button>
+ -->
     </div>
   </aside>
 </section>

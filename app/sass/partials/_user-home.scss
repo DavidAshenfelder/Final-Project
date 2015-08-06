@@ -23,6 +23,11 @@
   justify-content: center;
 }
 
+.windowDetailsHeader {
+  margin: 0;
+  width: 200px;
+}
+
 .mapPageWrapper {
   display: flex;
   justify-content: center;
@@ -35,7 +40,7 @@
   width: 100%;
   text-align: center;
   color: $aqua;
-  border-bottom: 2px solid $lightText;
+  /* border-bottom: 2px solid $lightText; */
 }
 
 .panel-body {
@@ -124,6 +129,9 @@
     width: 100%;
     text-align: center;
     background-color: $lightText;
+    h4 {
+      text-shadow: 1px 2px 1px #606060;
+    }
   }
 }
 
@@ -151,5 +159,8 @@
     width: 100%;
     text-align: center;
     background-color: $lightText;
+    h4 {
+      text-shadow: 1px 2px 1px #606060;
+    }
   }
 }

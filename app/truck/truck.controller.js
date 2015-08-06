@@ -35,7 +35,8 @@
               truckName: truckDetails.truckName,
               truckImage: truckDetails.truckImage,
               truckTime: truckDetails.truckTime,
-              truckId: truckDetails._id
+              truckId: truckDetails._id,
+              truckLocation: truckDetails.truckLocation.address
             };
             $scope.detailMarkers.push(marker);
           });

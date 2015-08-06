@@ -21,12 +21,20 @@
 }
 
 .truckListContainer {
+  padding: 0;
+  .search-filter {
+    width: 80%;
+    font-size: 24px;
+    margin: 1%;
+    text-align: center;
+  }
   a {
     overflow-wrap: break-word;
   }
 }
 
 .truckListRow {
+  padding: 1%;
   height: auto;
   overflow: hidden;
   background-color: $grey;
@@ -34,7 +42,6 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background: radial-gradient( rgba(0, 0, 0, .6), rgba(0, 0, 0, 1)), url('../Images/Food-Truck-Collage.jpg') fixed;
-
-
+  min-height: 650px;
+  background: linear-gradient(to right, rgba(0, 0, 0, .85), rgba(0, 0, 0, .85)), url('../Images/Food-Truck-Collage.jpg') fixed;
 }

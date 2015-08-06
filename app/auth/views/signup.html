@@ -1,13 +1,27 @@
-<div class="container">
+<div class="container signup-container">
+  <video autoplay loop src="Images/food-truck-line-video.mp4" autoplay poster="Images/food-truck-line.jpg">
+  </video>
   <div class="row center-row">
-    <div class="panel col-md-8">
-      <div class="panel-body">
-        <h2 class="text-center">Sign up</h2>
-        <accordion>
-          <accordion-group is-open="status.open">
-            <accordion-heading>
-               Truck Vendor Sign Up  <i class=" truckTitle pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-            </accordion-heading>
+    <div class="panel col-md-8 signup-form-wrapper">
+      <h2 class="text-center text-grey">Sign up</h2>
+      <div class="panel-body signup-body">
+        <div class="logo-container">
+          <div class="logo-wrapper">
+            <img src="Images/truck-logo.png" alt="">
+          </div>
+        </div>
+        <div class="signup-button-wrapper">
+          <button class="btn-primary truckSignUp" ng-hide="foodVendor || hungryPerson" ng-click="showVendor()">Truck Vendor</button>
+          <div class="signup-or-separator or" ng-hide="foodVendor || hungryPerson">
+            <h6 class="text" >or</h6>
+            <hr>
+          </div>
+          <button class="btn-primary clientSignUp" ng-hide="foodVendor || hungryPerson" ng-click="showClient()">Hungry Person</button>
+        </div>
+        <div class="vendorWrapper" ng-show="foodVendor">
+            <h2>
+               Truck Vendor Sign Up  <button class="btn-danger float-right x-button" ng-click="hideVendor()">X</button>
+            </h2>
             <form ng-controller="SignupCtrl" method="post" ng-submit="truckSignup()" name="truckSignupForm">
               <div class="form-group has-feedback" ng-class="{ 'has-error' : signupForm.displayName.$invalid && truckSignupForm.displayName.$dirty }">
                 <input class="form-control input-lg" type="text" name="displayName" ng-model="displayName" placeholder="Name" required autofocus>
@@ -75,13 +89,11 @@
 
               <p class="text-center text-muted">Already have an account? <a href="/#/login">Log in now</a></p>
             </form>
-          </accordion-group>
-        </accordion>
-        <accordion>
-          <accordion-group ng-init="status.open = true" is-open="status.open">
-            <accordion-heading>
-               Sign Up  <i class=" truckTitle pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-            </accordion-heading>
+          </div>
+          <div class="clientFormWrapper" ng-show="hungryPerson">
+            <h2>
+               Hungry Person Sign Up  <button class="btn-danger float-right x-button" ng-click="hideClient()">X</button>
+            </h2>
             <form method="post" ng-submit="signup()" name="signupForm" ng-controller="SignupCtrl">
               <div class="form-group has-feedback" ng-class="{ 'has-error' : signupForm.displayName.$invalid && signupForm.displayName.$dirty }">
                 <input class="form-control input-lg" type="text" name="displayName" ng-model="displayName" placeholder="Name" required autofocus>
@@ -137,8 +149,7 @@
 
               <p class="text-center text-muted">Already have an account? <a href="/#/login">Log in now</a></p>
             </form>
-          </accordion-group>
-        </accordion>
+          </div>
       </div>
     </div>
   </div>
