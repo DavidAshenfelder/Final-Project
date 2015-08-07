@@ -11,6 +11,21 @@
       $routeParams,
       $auth,
       uiGmapGoogleMapApi) {
+        $scope.closeMenu = function() {
+          console.log('im in the closeMenu function');
+          angular.element(document.querySelector('#toggle')).removeClass('none');
+        };
+
+        $scope.toggleMenu = function() {
+          angular.element(document.querySelector('#toggle')).toggleClass('none');
+
+        };
+
+        $scope.isAuthenticated = function() {
+          console.log('hello');
+          return $auth.isAuthenticated();
+        };
+
 
       $scope.markers = [];
 

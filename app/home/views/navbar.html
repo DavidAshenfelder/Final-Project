@@ -1,24 +1,22 @@
-<div ng-show="isAuthenticated()" ng-controller="NavbarCtrl" class="navbar navbar-default my-navbar col-md-12">
-  <div>
-    <button class="btn" ng-click="isCollapsed = !isCollapsed"><i class="fa fa-bars"></i> Menu</button>
-    <div collapse="isCollapsed" class="well-lg well">
+<div ng-show="isAuthenticated()" ng-controller="HomeController" class="navbar navbar-default my-navbar col-md-12">
+    <button class="btn" ng-click="toggleMenu()"><i class="fa fa-bars"></i> Menu</button>
+    <div id="toggle" class="well-lg well none">
       <ul class="nav">
-        <li><a ng-click="isCollapsed = !isCollapsed" href="/#/home"><i class="fa fa-home"></i> Home</a></li>
-        <li><a ng-click="isCollapsed = !isCollapsed" href="/#/posts">Message Board</a></li>
-        <li><a ng-click="isCollapsed = !isCollapsed" href="/#/trucks">Trucks</a></li>
+        <li><a ng-click="toggleMenu()" href="/#/home"><i class="fa fa-home"></i> Home</a></li>
+        <li><a ng-click="toggleMenu()" href="/#/posts"><i class="fa fa-comments"></i> Message Board</a></li>
+        <li><a ng-click="toggleMenu()" href="/#/trucks"><i class="fa fa-truck"></i> Trucks</a></li>
       </ul>
     </div>
-  </div>
-    <a class="" href="/#/home">
+    <a href="/#/home">
       <div class="hearder-bar-logo truck-logo logo-wrapper col-md-2 col-sm-3 col-xs-6">
       </div>
     </a>
     <ul ng-if="!isAuthenticated()" class="not-auth nav">
-      <li><a ng-click="isCollapsed = !isCollapsed" href="/#/login"><i class="fa fa-sign-in"></i> Login</a></li>
-      <li><a ng-click="isCollapsed = !isCollapsed" href="/#/signup">Sign up</a></li>
+      <li><a href="/#/login"><i class="fa fa-sign-in"></i> Login</a></li>
+      <li><a href="/#/signup">Sign up</a></li>
     </ul>
     <ul class="is-auth nav" ng-if="isAuthenticated()">
-      <li><a ng-click="" href="/#/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
-      <li><a ng-click="isCollapsed = !isCollapsed" href="/#/profile"><i class="fa fa-gear"></i> Profile</a></li>
+      <li><a href="/#/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
+      <li><a href="/#/profile"><i class="fa fa-gear"></i> Profile</a></li>
     </ul>
   </div>

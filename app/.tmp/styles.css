@@ -8,6 +8,9 @@
   top: 0;
   width: 100%; }
 
+.none {
+  display: none; }
+
 .my-navbar {
   display: -webkit-box;
   display: -webkit-flex;
