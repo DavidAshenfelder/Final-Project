@@ -25,6 +25,11 @@ justify-content: center;
     height: 100px;
     margin:0;
     box-shadow: 0 3px 5px rgba(0, 0, 0, .8);
+    &:hover {
+      background-color: $grey;
+      transition: ease .5s;
+
+    }
   }
   .well, .well-lg {
     width: 40%;
@@ -45,6 +50,9 @@ justify-content: center;
     height: 50px;
     position: fixed;
     left: 0;
+    &:hover {
+      color: white;
+    }
   }
 }
 

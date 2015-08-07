@@ -29,6 +29,10 @@
     height: 100px;
     margin: 0;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8); }
+    .my-navbar .hearder-bar-logo:hover {
+      background-color: #606060;
+      -webkit-transition: ease .5s;
+              transition: ease .5s; }
   .my-navbar .well, .my-navbar .well-lg {
     width: 40%;
     position: fixed;
@@ -45,6 +49,8 @@
     height: 50px;
     position: fixed;
     left: 0; }
+    .my-navbar .btn:hover {
+      color: white; }
 
 .is-auth, .not-auth {
   position: fixed;
@@ -174,11 +180,18 @@
   background: radial-gradient(rgba(0, 0, 0, 0.2), black), url("../Images/Truck-Skyline.jpg") no-repeat no-repeat fixed;
   background-size: cover; }
 
+.border-bottom {
+  border-bottom: 2px solid #d4d6d6; }
+
+.no-padding {
+  padding: 0; }
+
 .panel-default h2 {
-  width: 100%;
   text-align: center;
-  color: #00DFFC;
-  /* border-bottom: 2px solid $lightText; */ }
+  color: #00DFFC; }
+
+.side-padding {
+  width: 90%; }
 
 .panel-body {
   background-color: #727272; }
@@ -640,7 +653,7 @@
           justify-content: center;
   width: 100%; }
   .logo-container img {
-    width: 200px;
+    width: 230px;
     height: 200px; }
 
 .text-grey {
@@ -822,27 +835,31 @@ a {
   font-weight: bold;
   border-radius: 2px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-  background-color: #00DFFC;
-  border: 1px solid #008C9E; }
+  background-color: #00DFFC; }
 
 .btn-primary {
   background-color: #00DFFC;
-  color: #727272;
-  border: 1px solid #008C9E; }
+  color: #727272; }
 
 .btn-primary:hover {
-  background-color: #3ad9ea; }
+  background-color: #00DFFC;
+  color: white;
+  border: 3px solid white;
+  -webkit-transition: ease .5s;
+          transition: ease .5s; }
 
 .btn-success {
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   background-color: #00DFFC;
-  color: #727272;
-  border: 1px solid #008C9E; }
+  color: #727272; }
 
 .btn-success:hover {
-  background-color: #008C9E;
-  -webkit-transition: ease .25s;
-          transition: ease .25s;
-  border: 1px solid #00DFFC; }
+  background-color: #00DFFC;
+  color: white;
+  -webkit-transition: ease .5s;
+          transition: ease .5s;
+  border: 3px solid white; }
 
 .btn-danger {
   background-color: #db4437; }

@@ -57,7 +57,7 @@
 
               <div class="form-group has-feedback" ng-class="{ 'has-error' : truckSignupForm.truckName.$invalid && truckSignupForm.truckName.$dirty }">
                 <input class="form-control input-lg" type="text" name="truckName" ng-model="truckName" placeholder="Truck Name" required autofocus>
-                <span class="ion-person form-control-feedback"></span>
+                <span class="form-control-feedback"><i class="fa fa-truck"></i></span>
                 <div class="help-block text-danger" ng-if="truckSignupForm.truckName.$dirty" ng-messages="truckSignupForm.truckName.$error">
                   <div ng-message="required">You must enter your Truck Name.</div>
                 </div>

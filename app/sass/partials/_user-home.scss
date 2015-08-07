@@ -36,11 +36,21 @@
   background-size: cover;
 }
 
+.border-bottom {
+  border-bottom: 2px solid $lightText;
+}
+
+.no-padding {
+  padding: 0;
+}
+
 .panel-default h2 {
-  width: 100%;
   text-align: center;
   color: $aqua;
-  /* border-bottom: 2px solid $lightText; */
+}
+
+.side-padding {
+  width: 90%;
 }
 
 .panel-body {

@@ -171,31 +171,32 @@ a {
   border-radius: 2px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
   background-color: $aqua;
-  border: 1px solid $mediumTeal;
 }
 
 .btn-primary {
   background-color: $aqua;
   color: $text;
-  border: 1px solid $mediumTeal;
-
 }
 
 .btn-primary:hover {
-  background-color: $lightTeal;
+  background-color: $aqua;
+  color: white;
+  border: 3px solid white;
+  transition: ease .5s;
 }
 
 .btn-success {
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
   background-color: $aqua;
   color: $text;
-  border: 1px solid $mediumTeal;
-
 }
 
 .btn-success:hover {
-  background-color: $mediumTeal;
-  transition: ease .25s;
-  border: 1px solid $aqua;
+  background-color: $aqua;
+  color: white;
+  transition: ease .5s;
+  border: 3px solid white;
 }
 
 .btn-danger {
