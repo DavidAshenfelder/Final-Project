@@ -1,7 +1,68 @@
 .navbar {
   border: 0;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8);
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  z-index: 100;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+
+.my-navbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px; }
+  .my-navbar .hearder-bar-logo {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8); }
+  .my-navbar .well, .my-navbar .well-lg {
+    width: 40%;
+    position: fixed;
+    left: 0;
+    top: 50px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8); }
+    .my-navbar .well li a, .my-navbar .well-lg li a {
+      color: #606060; }
+      .my-navbar .well li a:hover, .my-navbar .well-lg li a:hover {
+        color: #00DFFC; }
+  .my-navbar .btn {
+    height: 50px;
+    position: fixed;
+    left: 0; }
+
+.is-auth, .not-auth {
+  position: fixed;
+  right: 0;
+  height: 50px;
+  width: 30%;
+  display: inherit;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+  .is-auth li a, .not-auth li a {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 50px; }
 
 .navbar-header {
   float: left;
@@ -625,11 +686,9 @@
   background-color: red; }
 
 body {
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/shattered.png) fixed;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Images/shattered.png) fixed;
   background-color: #727272; }
 
-.headerFiller {
+.header-filler {
   height: 50px; }
 
 .angular-google-map-container {

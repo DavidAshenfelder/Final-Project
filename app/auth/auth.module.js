@@ -5,7 +5,7 @@ angular.module('auth', ['ngMessages', 'ngRoute', 'mgcrea.ngStrap', 'satellizer']
         templateUrl: 'auth/views/login.html',
         controller: 'LoginCtrl'
       })
-      .when('/signup', {
+      .when('/', {
         templateUrl: 'auth/views/signup.html',
         controller: 'SignupCtrl'
       })

@@ -17,11 +17,10 @@ $lightText: #d4d6d6;
 
 
 body {
-  background: linear-gradient(to right, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(../Images/shattered.png) fixed;
-  background-color: $text;
+    background-color: $text;
 }
 
-.headerFiller {
+.header-filler {
   height: 50px;
 }
 

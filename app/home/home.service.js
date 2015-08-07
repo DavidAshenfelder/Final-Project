@@ -4,7 +4,7 @@
   .module('home')
   .factory('HomeService', function($http, $routeParams) {
   var getTrucks = function() {
-    return $http.get('/api/trucks')
+    return $http.get('/api/trucks');
   };
 
   var getProfile = function() {

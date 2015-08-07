@@ -1,5 +1,5 @@
 angular.module('auth')
-  .controller('SignupCtrl', function($scope, $alert, $auth) {
+  .controller('SignupCtrl', function($scope, $alert, $auth, $location) {
 
     $scope.showVendor = function() {
        $scope.foodVendor = true;
@@ -26,6 +26,8 @@ angular.module('auth')
         phone: $scope.phone,
         truck: false,
 
+      }).then(function() {
+        $location.path('/home')
       }).catch(function(response) {
         if (typeof response.data.message === 'object') {
           angular.forEach(response.data.message, function(message) {
@@ -59,7 +61,8 @@ angular.module('auth')
         truckWebsite: $scope.truckWebsite,
         password: $scope.password
 
-      }).catch(function(response) {
+      }).then(function() {
+        $location.path('/home')}).catch(function(response) {
         if (typeof response.data.message === 'object') {
           angular.forEach(response.data.message, function(message) {
             $alert({

@@ -42,8 +42,8 @@
           });
 
         TruckService.getActiveTrucks().then(function(trucks) {
-          $scope.activeTrucks = trucks.data
-          var activeTrucks = trucks.data
+          $scope.activeTrucks = trucks.data;
+          var activeTrucks = trucks.data;
           activeTrucks.forEach(function(el) {
             var truck = el;
             var marker = {
@@ -57,7 +57,7 @@
               },
             };
             $scope.markers.push(marker);
-          })
+          });
         });
 
         $scope.map = {
@@ -82,17 +82,17 @@
         };
 
         $scope.getTruck = function(id) {
-          $location.path('/trucks/' + id)
+          $location.path('/trucks/' + id);
         };
 
         $scope.addReview = function(id, reviewForm) {
-          TruckService.addReview(id, reviewForm)
-          $scope.hideMe()
+          TruckService.addReview(id, reviewForm);
+          $scope.hideMe();
           $scope.$broadcast('review:posted');
         };
 
         $scope.deleteReviews = function(id) {
-          TruckService.deleteReviews(id)
+          TruckService.deleteReviews(id);
         };
 
         $scope.addLike = function(id, truckDetails) {
@@ -105,7 +105,7 @@
                return truckDetails.truckLikes = 1;
              }
            }());
-           TruckService.addLike(id, {truckLikes: likeUp})
+           TruckService.addLike(id, {truckLikes: likeUp});
            $scope.$broadcast('likeUp:cast');
          }
         };

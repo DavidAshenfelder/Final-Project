@@ -1,11 +1,13 @@
 angular.module('auth')
-  .controller('LoginCtrl', function($scope, $alert, $auth) {
+  .controller('LoginCtrl', function($scope, $rootScope, $alert, $auth, $location) {
     $scope.login = function() {
       $auth.login({
           email: $scope.email,
-          password: $scope.password
+          password: $scope.password,
+
         })
         .then(function(res) {
+          $location.path('/home')
           console.log(res.data);
           $alert({
             content: 'You have successfully logged in',
@@ -23,9 +25,10 @@ angular.module('auth')
           });
         });
     };
-    $scope.authenticate = function(provider) {
+    $rootScope.authenticate = function(provider) {
       $auth.authenticate(provider)
         .then(function(res) {
+          $location.path('/home')
           console.log(res.data);
           $alert({
             content: 'You have successfully logged in',

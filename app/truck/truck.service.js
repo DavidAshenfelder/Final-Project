@@ -12,16 +12,16 @@ angular.module('truck')
       },
 
       addReview: function (id, truckReviews) {
-        return $http.put('/api/trucks/' + id, truckReviews)
+        return $http.put('/api/trucks/' + id, truckReviews);
       },
 
       addLike: function (id, truckLikes) {
         console.log('in service', truckLikes);
-        return $http.put('/api/trucks/' + id, truckLikes)
+        return $http.put('/api/trucks/' + id, truckLikes);
       },
 
       deleteReviews: function (id) {
-        return $http.delete('/api/trucks/' + id)
+        return $http.delete('/api/trucks/' + id);
       },
 
       getActiveTrucks: function() {

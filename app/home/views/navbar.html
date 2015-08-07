@@ -1,18 +1,24 @@
-<div ng-controller="NavbarCtrl" class="navbar navbar-default navbar-static-top col-md-12">
-  <div class="navbar-header col-md-2 col-sm-3 col-xs-6">
-    <a class="navbar-brand" href="/#/"><img src="Images/truck-logo.png" alt=""> Truckster</a>
+<div ng-show="isAuthenticated()" ng-controller="NavbarCtrl" class="navbar navbar-default my-navbar col-md-12">
+  <div>
+    <button class="btn" ng-click="isCollapsed = !isCollapsed"><i class="fa fa-bars"></i> Menu</button>
+    <div collapse="isCollapsed" class="well-lg well">
+      <ul class="nav">
+        <li><a ng-click="isCollapsed = !isCollapsed" href="/#/home"><i class="fa fa-home"></i> Home</a></li>
+        <li><a ng-click="isCollapsed = !isCollapsed" href="/#/posts">Message Board</a></li>
+        <li><a ng-click="isCollapsed = !isCollapsed" href="/#/trucks">Trucks</a></li>
+      </ul>
+    </div>
   </div>
-    <ul class="nav navbar-nav  col-md-4 col-sm-5 col-xs-3">
-      <li><a href="/#/"><i class="fa fa-home"></i> Home</a></li>
-      <li><a href="/#/posts">Message Board</a></li>
-      <li><a href="/#/trucks">Trucks</a></li>
+    <a class="" href="/#/home">
+      <div class="hearder-bar-logo truck-logo logo-wrapper col-md-2 col-sm-3 col-xs-6">
+      </div>
+    </a>
+    <ul ng-if="!isAuthenticated()" class="not-auth nav">
+      <li><a ng-click="isCollapsed = !isCollapsed" href="/#/login"><i class="fa fa-sign-in"></i> Login</a></li>
+      <li><a ng-click="isCollapsed = !isCollapsed" href="/#/signup">Sign up</a></li>
     </ul>
-    <ul ng-if="!isAuthenticated()" class="nav navbar-nav pull-right col-md-3 col-sm-3 col-xs-3">
-      <li><a href="/#/login"><i class="fa fa-sign-in"></i> Login</a></li>
-      <li><a href="/#/signup">Sign up</a></li>
-    </ul>
-    <ul ng-if="isAuthenticated()" class="nav navbar-nav pull-right col-md-3 col-sm-3 col-xs-3">
-      <li><a href="/#/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
-      <li><a href="/#/profile"><i class="fa fa-gear"></i> Profile</a></li>
+    <ul class="is-auth nav" ng-if="isAuthenticated()">
+      <li><a ng-click="" href="/#/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
+      <li><a ng-click="isCollapsed = !isCollapsed" href="/#/profile"><i class="fa fa-gear"></i> Profile</a></li>
     </ul>
   </div>

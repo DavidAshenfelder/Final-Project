@@ -2,7 +2,15 @@
   'use strict';
     angular
     .module('home')
-    .controller('HomeController', function(HomeService, Account, $scope, $rootScope, $location, $routeParams, $auth, uiGmapGoogleMapApi) {
+    .controller('HomeController', function(
+      HomeService,
+      Account,
+      $scope,
+      $rootScope,
+      $location,
+      $routeParams,
+      $auth,
+      uiGmapGoogleMapApi) {
 
       $scope.markers = [];
 
@@ -18,11 +26,11 @@
         scrollwheel: false
       };
         HomeService.getTrucks().then(function(trucks) {
-          $scope.trucks = trucks.data
+          $scope.trucks = trucks.data;
         });
         HomeService.active().then(function(trucks) {
-          $scope.activeTrucks = trucks.data
-          var activeTrucks = trucks.data
+          $scope.activeTrucks = trucks.data;
+          var activeTrucks = trucks.data;
           activeTrucks.forEach(function(el) {
             var truck = el;
             var marker = {
@@ -41,10 +49,15 @@
               truckLocation: truck.truckLocation.address
             };
             $scope.markers.push(marker);
-          })
+          });
         });
+
+        $scope.isAuthenticated = function() {
+          return $auth.isAuthenticated();
+        };
+
         HomeService.inactive().then(function(trucks) {
-          $scope.inactiveTrucks = trucks.data
+          $scope.inactiveTrucks = trucks.data;
         });
     });
 }());
