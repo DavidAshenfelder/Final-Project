@@ -21,18 +21,22 @@
       -ms-flex-pack: center;
           justify-content: center;
   height: 50px; }
-  .my-navbar .hearder-bar-logo {
+  .my-navbar .header-bar-logo {
     margin-left: auto;
     margin-right: auto;
     background-color: white;
     width: 100px;
     height: 100px;
     margin: 0;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8); }
-    .my-navbar .hearder-bar-logo:hover {
-      background-color: #606060;
-      -webkit-transition: ease .5s;
-              transition: ease .5s; }
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8);
+    /* &:hover {
+      background-color: $grey;
+      transition: ease .5s;
+
+    } */ }
+  .my-navbar #go-home {
+    height: 50%;
+    margin: 0; }
   .my-navbar .well, .my-navbar .well-lg {
     width: 40%;
     position: fixed;
@@ -186,9 +190,10 @@
 .no-padding {
   padding: 0; }
 
-.panel-default h2 {
+.home-h2 {
   text-align: center;
-  color: #00DFFC; }
+  color: #00DFFC;
+  width: 90%; }
 
 .side-padding {
   width: 90%; }
@@ -412,7 +417,9 @@
             transition: ease .25s; }
 
 .truckListContainer {
-  padding: 0; }
+  padding: 0;
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../Images/Food-Truck-Collage.jpg") fixed;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../Images/Food-Truck-Collage.jpg") fixed; }
   .truckListContainer .search-filter {
     width: 80%;
     font-size: 24px;
@@ -425,7 +432,6 @@
   padding: 1%;
   height: auto;
   overflow: hidden;
-  background-color: #606060;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -441,9 +447,7 @@
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  min-height: 650px;
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../Images/Food-Truck-Collage.jpg") fixed;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../Images/Food-Truck-Collage.jpg") fixed; }
+  min-height: 650px; }
 
 .truck-detail-wrapper {
   padding: 2%; }
@@ -701,6 +705,13 @@
   float: right;
   background-color: red; }
 
+.post-title {
+  text-align: left; }
+
+.red {
+  background: none;
+  background-color: red; }
+
 body {
   background-color: #727272; }
 
@@ -728,6 +739,9 @@ a {
 
 .row {
   margin: 0; }
+
+.truckListRow {
+  margin-top: 50px; }
 
 .panel {
   background-color: #d4d6d6;

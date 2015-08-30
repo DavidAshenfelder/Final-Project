@@ -22,6 +22,8 @@
 
 .truckListContainer {
   padding: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, .85), rgba(0, 0, 0, .85)), url('../Images/Food-Truck-Collage.jpg') fixed;
+
   .search-filter {
     width: 80%;
     font-size: 24px;
@@ -37,11 +39,9 @@
   padding: 1%;
   height: auto;
   overflow: hidden;
-  background-color: $grey;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   min-height: 650px;
-  background: linear-gradient(to right, rgba(0, 0, 0, .85), rgba(0, 0, 0, .85)), url('../Images/Food-Truck-Collage.jpg') fixed;
 }

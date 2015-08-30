@@ -1,7 +1,7 @@
 <div class="container-fluid" >
   <div class="row mapPageWrapper">
       <div class="map container panel-default col-md-7 col-sm-12 col-xs-12">
-          <h2 class="border-bottom">Truck Map</h2>
+          <h2 class="home-h2 border-bottom">Truck Map</h2>
           <ui-gmap-google-map center='map.center' zoom='map.zoom' fit=true scrollwheel=false class="col-md-12 col-sm-12 col-xs-12">
             <ui-gmap-marker model="marker" ng-repeat="marker in markers" coords="marker.coords" idkey="marker.idKey" options="marker.options">
               <ui-gmap-window isIconVisibleOnClick="true" coords="marker.coords">
@@ -18,7 +18,7 @@
       <div class="mapInfoWrapper panel-default container col-md-4 col-sm-12 col-xs-12">
         <div class="listWapper col-sm-6 col-md-12">
           <div class="headerWrapper">
-            <h2 class="activeHeader border-bottom">Active Trucks</h2>
+            <h2 class="home-h2 activeHeader border-bottom">Active Trucks</h2>
           </div>
           <div class="activeTruckWrapper" >
             <accordion class="truckWrapper" ng-repeat="truck in activeTrucks">
@@ -40,7 +40,7 @@
         </div>
         <div class="listWrapper col-sm-6 col-md-12">
           <div class="headerWrapper">
-            <h2 class="activeHeader border-bottom">Inactive Trucks</h2>
+            <h2 class="home-h2 activeHeader border-bottom">Inactive Trucks</h2>
           </div>
           <div class="activeTruckWrapper" >
             <accordion class="truckWrapper" ng-repeat="truck in inactiveTrucks">
@@ -63,7 +63,7 @@
       <section class="container-fluid trucksContainer">
 <!-- <truck-list ng-repeat="truck in trucks" truck="truck"></truck-list>-->
       <div class="panel-default trucksRow row col-md-12 col-sm-12 col-xs-12">
-        <h2 class="border-bottom side-padding">Trucks</h2>
+        <h2 class="home-h2 border-bottom side-padding">Trucks</h2>
         <a href="/#/trucks/{{truck._id}}" ng-repeat="truck in trucks | limitTo : 10" class="col-md-3 col-sm-5 col-xs-12">
           <div class="trucksWrapper" data-id="{{truck._id}}"  style='background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{truck.truckImage}}) no-repeat no-repeat center; background-size: cover;'>
             <div class="truckInfo">
@@ -79,7 +79,7 @@
         <section class="container-fluid trucksContainer2">
   <!-- <truck-list ng-repeat="truck in trucks" truck="truck"></truck-list>-->
         <div class="panel-default trucksRow2 row col-md-12 col-sm-12 col-xs-12">
-          <h2 class="border-bottom side-padding">Truck Events</h2>
+          <h2 class="home-h2 border-bottom side-padding">Truck Events</h2>
           <a href="/#/trucks/{{truck._id}}" class="col-md-3 col-sm-5 col-xs-12">
             <div class="trucksWrapper"  style='background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{truck.truckImage}}) no-repeat no-repeat center; background-size: cover;'>
               <div class="truckInfo">

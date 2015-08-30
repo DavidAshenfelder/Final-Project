@@ -11,6 +11,10 @@
       $routeParams,
       $auth,
       uiGmapGoogleMapApi) {
+        $scope.homeLogo = function() {
+          angular.element(document.querySelector('#header-logo')).toggleClass('red', 5000);
+          angular.element(document.querySelector('#go-home')).toggleClass('none', 5000);
+        };
         $scope.closeMenu = function() {
           console.log('im in the closeMenu function');
           angular.element(document.querySelector('#toggle')).removeClass('none');

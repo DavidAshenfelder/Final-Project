@@ -7,8 +7,10 @@
         <li><a ng-click="toggleMenu()" href="/#/trucks"><i class="fa fa-truck"></i> Trucks</a></li>
       </ul>
     </div>
+
     <a href="/#/home">
-      <div class="hearder-bar-logo truck-logo logo-wrapper col-md-2 col-sm-3 col-xs-6">
+      <div id="header-logo" ng-mouseenter="homeLogo()" ng-mouseleave="homeLogo()" class="header-bar-logo truck-logo logo-wrapper col-md-2 col-sm-3 col-xs-6">
+        <h2 id="go-home" class="none">Home</h2>
       </div>
     </a>
     <ul ng-if="!isAuthenticated()" class="not-auth nav">

@@ -13,8 +13,12 @@ $lightText: #d4d6d6;
 @import "partials/user-truck-list";
 @import "partials/user-truck-detail";
 @import "partials/signup";
+@import "partials/posts";
 
-
+.red {
+  background: none;
+  background-color: red;
+}
 
 body {
     background-color: $text;
@@ -51,6 +55,10 @@ a {
 
 .row {
   margin: 0;
+}
+
+.truckListRow {
+  margin-top: 50px;
 }
 
 .panel {
