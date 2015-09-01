@@ -8,7 +8,6 @@ angular.module('auth')
         })
         .then(function(res) {
           $location.path('/home')
-          console.log(res.data);
           $alert({
             content: 'You have successfully logged in',
             animation: 'fadeZoomFadeDown',
@@ -29,7 +28,6 @@ angular.module('auth')
       $auth.authenticate(provider)
         .then(function(res) {
           $location.path('/home')
-          console.log(res.data);
           $alert({
             content: 'You have successfully logged in',
             animation: 'fadeZoomFadeDown',

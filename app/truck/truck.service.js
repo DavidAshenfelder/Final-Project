@@ -16,7 +16,6 @@ angular.module('truck')
       },
 
       addLike: function (id, truckLikes) {
-        console.log('in service', truckLikes);
         return $http.put('/api/trucks/' + id, truckLikes);
       },
 

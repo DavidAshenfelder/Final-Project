@@ -112,7 +112,7 @@
 
         var watchCallback = function() {
           TruckService.getTruck($routeParams.truckId).then(function(truck) {
-            $rootScope.truckDetails = truck.data;
+            $scope.truckDetails = truck.data;
             var truckDetails = truck.data;
               var marker = {
                 idKey: truckDetails._id,

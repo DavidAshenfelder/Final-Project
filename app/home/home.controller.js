@@ -11,25 +11,6 @@
       $routeParams,
       $auth,
       uiGmapGoogleMapApi) {
-        $scope.homeLogo = function() {
-          angular.element(document.querySelector('#header-logo')).toggleClass('red', 5000);
-          angular.element(document.querySelector('#go-home')).toggleClass('none', 5000);
-        };
-        $scope.closeMenu = function() {
-          console.log('im in the closeMenu function');
-          angular.element(document.querySelector('#toggle')).removeClass('none');
-        };
-
-        $scope.toggleMenu = function() {
-          angular.element(document.querySelector('#toggle')).toggleClass('none');
-
-        };
-
-        $scope.isAuthenticated = function() {
-          console.log('hello');
-          return $auth.isAuthenticated();
-        };
-
 
       $scope.markers = [];
 
@@ -70,13 +51,30 @@
             $scope.markers.push(marker);
           });
         });
+    $scope.isAuthenticated = function() {
+      return $auth.isAuthenticated();
+    };
 
-        $scope.isAuthenticated = function() {
-          return $auth.isAuthenticated();
-        };
+    $scope.homeLogo = function() {
+      angular.element(document.querySelector('#header-logo')).toggleClass('red', 5000);
+      angular.element(document.querySelector('#go-home')).toggleClass('none', 5000);
+    };
+    $scope.closeMenu = function() {
+      console.log('im in the closeMenu function');
+      angular.element(document.querySelector('#toggle')).removeClass('none');
+    };
 
-        HomeService.inactive().then(function(trucks) {
-          $scope.inactiveTrucks = trucks.data;
-        });
+    $scope.toggleMenu = function() {
+      angular.element(document.querySelector('#toggle')).toggleClass('none');
+
+    };
+
+    $scope.isAuthenticated = function() {
+      return $auth.isAuthenticated();
+    };
+
+    HomeService.inactive().then(function(trucks) {
+      $scope.inactiveTrucks = trucks.data;
     });
+        });
 }());
